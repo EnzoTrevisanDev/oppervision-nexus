@@ -1,69 +1,140 @@
-# Welcome to your Lovable project
+# Oppervision - Professional IT Consulting Platform
 
-## Project info
+## Overview
+Oppervision is a professional IT consulting and automation platform built with React, TypeScript, and Tailwind CSS. The platform features a modern, responsive design with a luxurious color scheme that emphasizes professionalism and technical expertise.
 
-**URL**: https://lovable.dev/projects/c1a2eef2-9045-495c-9f32-f74bb1e22eab
+## Project Structure
 
-## How can I edit this code?
+### Components
 
-There are several ways of editing your application.
+#### Header (`src/components/Header.tsx`)
+- Responsive navigation bar with mobile menu support
+- Company logo and brand name
+- Navigation links to main sections (About, Services, Contact)
+- Smooth transitions and hover effects
 
-**Use Lovable**
+#### Footer (`src/components/Footer.tsx`)
+- Social media links with icons
+- Copyright information
+- Professional contact links
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c1a2eef2-9045-495c-9f32-f74bb1e22eab) and start prompting.
+### Main Page Sections (`src/pages/Index.tsx`)
 
-Changes made via Lovable will be committed automatically to this repo.
+#### Hero Section
+- Gradient background with professional styling
+- Clear value proposition
+- Call-to-action buttons
+- Animated entrance effects using Framer Motion
 
-**Use your preferred IDE**
+#### About Section
+- Company overview
+- Mission statement
+- Professional background information
+- Clean, readable layout
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#### Services Section
+Features four main service offerings:
+1. Monitoring Automation (Zabbix, Prometheus, Grafana)
+2. Kubernetes Infrastructure
+3. Cloud Computing Solutions
+4. Personalized Consulting
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Each service card includes:
+- Icon representation
+- Service title
+- Detailed description
+- Hover effects and animations
 
-Follow these steps:
+#### Testimonials Section
+Client testimonials featuring:
+- Star ratings
+- Client names and roles
+- Testimonial content
+- Responsive grid layout
+- Hover effects and shadows
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+#### Contact Section
+- Professional contact form
+- Input validation
+- Submission handling
+- Loading state management
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Technical Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Core Technologies
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion (animations)
+- Lucide React (icons)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### UI Components
+- Custom responsive components
+- Shadcn/ui integration
+- Mobile-first design approach
+
+### Styling
+Color Palette:
+- Primary: #1A1F2C (Deep Navy)
+- Secondary: #F6F6F7 (Light Gray)
+- Accent: #8B5CF6 (Rich Purple)
+- Text: Various shades optimized for readability
+- Background gradients for visual depth
+
+### Features
+- Responsive design for all screen sizes
+- Interactive UI elements
+- Smooth animations and transitions
+- Professional form handling
+- SEO-friendly structure
+
+## Best Practices
+- Component-based architecture
+- Clean code structure
+- Responsive design patterns
+- Performance optimization
+- Accessibility considerations
+
+## Getting Started
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
+```
+src/
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   └── ui/
+├── pages/
+│   └── Index.tsx
+├── lib/
+│   └── utils.ts
+└── App.tsx
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
 
-**Use GitHub Codespaces**
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c1a2eef2-9045-495c-9f32-f74bb1e22eab) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## Contact
+For any inquiries, please reach out through the contact form on our website or through our social media channels.
