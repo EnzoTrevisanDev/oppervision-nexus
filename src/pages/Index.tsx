@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Server, Cloud, ChartBar } from "lucide-react";
+import { Briefcase, Server, Cloud, ChartBar, Star } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -30,6 +30,27 @@ const Index = () => {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "João Silva",
+      role: "CTO, TechCorp",
+      content: "A Oppervision transformou completamente nossa infraestrutura de TI. A eficiência aumentou em 200% desde que começamos a trabalhar juntos.",
+      rating: 5
+    },
+    {
+      name: "Maria Santos",
+      role: "Diretora de Operações, InnovaTech",
+      content: "Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio.",
+      rating: 5
+    },
+    {
+      name: "Pedro Oliveira",
+      role: "CEO, StartupBR",
+      content: "A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente.",
+      rating: 5
+    }
+  ];
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -41,7 +62,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary pt-32 pb-20 text-white">
+      <section className="bg-gradient-to-r from-primary to-[#2A3444] pt-32 pb-20 text-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -71,7 +92,7 @@ const Index = () => {
       <section id="about" className="py-20 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Sobre Nós</h2>
+            <h2 className="text-3xl font-bold mb-6 text-primary">Sobre Nós</h2>
             <p className="text-gray-600 mb-8">
               Somos especialistas em tecnologia, automação e monitoramento, ajudando empresas a 
               otimizar suas operações e melhorar a escalabilidade de seus sistemas. Nossa missão 
@@ -85,7 +106,7 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-20 bg-secondary">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">Nossos Serviços</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -99,7 +120,7 @@ const Index = () => {
                   <div className="p-2 bg-accent/10 rounded-lg text-accent">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-semibold">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-primary">{service.title}</h3>
                 </div>
                 <p className="text-gray-600">{service.description}</p>
               </motion.div>
@@ -108,11 +129,40 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">O Que Nossos Clientes Dizem</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-accent fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4">{testimonial.content}</p>
+                <div>
+                  <p className="font-semibold text-primary">{testimonial.name}</p>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-secondary">
         <div className="container">
           <div className="max-w-xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-primary">Entre em Contato</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
