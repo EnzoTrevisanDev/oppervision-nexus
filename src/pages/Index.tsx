@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Server, Cloud, ChartBar, Github, Linkedin, Mail } from "lucide-react";
+import { Briefcase, Server, Cloud, ChartBar } from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Index = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,14 +33,15 @@ const Index = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Add form submission logic here
     setTimeout(() => setIsSubmitting(false), 1000);
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-secondary">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="bg-primary py-20 text-white">
+      <section className="bg-primary pt-32 pb-20 text-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -64,10 +67,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-secondary">
+      {/* About Section */}
+      <section id="about" className="py-20 bg-white">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">O que podemos fazer por você?</h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Sobre Nós</h2>
+            <p className="text-gray-600 mb-8">
+              Somos especialistas em tecnologia, automação e monitoramento, ajudando empresas a 
+              otimizar suas operações e melhorar a escalabilidade de seus sistemas. Nossa missão 
+              é entregar soluções rápidas, práticas e eficientes que impulsionam o crescimento 
+              do seu negócio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-secondary">
+        <div className="container">
+          <h2 className="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -75,7 +93,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl card-shadow hover-scale"
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-accent/10 rounded-lg text-accent">
@@ -90,22 +108,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Quem Somos</h2>
-            <p className="text-gray-600 mb-8">
-              Com experiência em tecnologia, automação e monitoramento, ajudamos empresas a otimizar
-              suas operações e melhorar a escalabilidade de seus sistemas. Nosso foco é entregar
-              soluções rápidas, práticas e eficientes.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="py-20 bg-secondary">
+      <section id="contact" className="py-20 bg-white">
         <div className="container">
           <div className="max-w-xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
@@ -155,25 +159,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 bg-primary text-white">
-        <div className="container">
-          <div className="flex justify-center space-x-6">
-            <a href="#" className="hover:text-accent transition-colors">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="#" className="hover:text-accent transition-colors">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="#" className="hover:text-accent transition-colors">
-              <Mail className="w-6 h-6" />
-            </a>
-          </div>
-          <p className="text-center mt-6 text-sm text-gray-400">
-            © 2024 Oppervision. Todos os direitos reservados.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
