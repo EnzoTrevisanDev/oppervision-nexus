@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Server, Cloud, ChartBar, Star } from "lucide-react";
+import { Server, Cloud, ChartBar, Briefcase } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TestimonialCard from "../components/TestimonialCard";
 
 const Index = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,13 +42,13 @@ const Index = () => {
       name: "Maria Santos",
       role: "Diretora de Operações, InnovaTech",
       content: "Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio.",
-      rating: 5
+      rating: 4.5
     },
     {
       name: "Pedro Oliveira",
       role: "CEO, StartupBR",
       content: "A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente.",
-      rating: 5
+      rating: 4
     }
   ];
 
@@ -135,24 +136,7 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">O Que Nossos Clientes Dizem</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-secondary p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-accent fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4">{testimonial.content}</p>
-                <div>
-                  <p className="font-semibold text-primary">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              </motion.div>
+              <TestimonialCard key={index} {...testimonial} />
             ))}
           </div>
         </div>
