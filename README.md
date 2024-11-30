@@ -95,6 +95,24 @@ Color Palette:
 - Performance optimization
 - Accessibility considerations
 
+## Tools
+- Styling and Design:
+
+    - Uses Tailwind CSS for responsive styling
+    - Implements Framer Motion for smooth animations
+    - Uses a professional color scheme defined in tailwind.config.ts
+    - Includes custom components from shadcn/ui library
+
+- Key Technologies Used:
+
+    - React 18 with TypeScript
+    - Vite as the build tool
+    - Tailwind CSS for styling
+    - Framer Motion for animations
+    - React Router for navigation
+    - Lucide React for icons
+    - React Query for potential data fetching
+
 ## Getting Started
 
 1. Clone the repository

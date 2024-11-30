@@ -35,20 +35,17 @@ const Index = () => {
     {
       name: "João Silva",
       role: "CTO, TechCorp",
-      content: "A Oppervision transformou completamente nossa infraestrutura de TI. A eficiência aumentou em 200% desde que começamos a trabalhar juntos.",
-      rating: 5
+      content: "A Oppervision transformou completamente nossa infraestrutura de TI. A eficiência aumentou em 200% desde que começamos a trabalhar juntos."
     },
     {
       name: "Maria Santos",
       role: "Diretora de Operações, InnovaTech",
-      content: "Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio.",
-      rating: 4.5
+      content: "Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio."
     },
     {
       name: "Pedro Oliveira",
       role: "CEO, StartupBR",
-      content: "A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente.",
-      rating: 4
+      content: "A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente."
     }
   ];
 
