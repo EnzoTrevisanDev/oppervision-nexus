@@ -157,5 +157,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 For any inquiries, please reach out through the contact form on our website or through our social media channels.
 
-#remove unecessary files from the repository
-#create a new page earch section, for the portifolio page make a way to present the projects, and for the service make more details about it in another page, make the forms send me a email and the button "Explore nosso portfólio" link to the another page and on the page and make the web site full responsable and tell me about how can i add the image and how can i deploy this website?
+
+
+##make a git pull to see what i change first after that create a new page earch section, for the portifolio page make a way to present the projects, and for the service make more details about it in another page, make the forms send me a email and the button "Explore nosso portfólio" link to the another page and on the page and make the web site full responsable and tell me about how can i add the image and how can i deploy this website? After all that remove unecessary files from the repository
+
+

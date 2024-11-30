@@ -9,8 +9,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src="/placeholder.svg" alt="Oppervision Logo" className="h-8 w-8" />
-            <span className="text-2xl font-bold text-primary">Oppervision</span>
+            
+            <img src="/placeholder.svg" alt="Oppervision Logo" className="h-8 w-8"/>
+            <a href="/"><span className="text-2xl font-bold text-primary">Oppervision</span></a>
           </div>
           
           {/* Mobile menu button */}
@@ -23,14 +24,17 @@ const Header = () => {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#about" className="text-primary hover:text-accent transition-colors">
+            <a href="/about" className="text-primary hover:text-accent transition-colors">
               Sobre
             </a>
             <a href="#services" className="text-primary hover:text-accent transition-colors">
               Serviços
             </a>
-            <a href="#contact" className="text-primary hover:text-accent transition-colors">
+            <a href="/contact" className="text-primary hover:text-accent transition-colors">
               Contato
+            </a>
+            <a href="/portifolio" className="text-primary hover:text-accent transition-colors">
+              Portifolio
             </a>
           </nav>
         </div>
@@ -45,8 +49,11 @@ const Header = () => {
               <a href="#services" className="text-primary hover:text-accent transition-colors">
                 Serviços
               </a>
-              <a href="#contact" className="text-primary hover:text-accent transition-colors">
+              <a href="/contact" className="text-primary hover:text-accent transition-colors">
                 Contato
+              </a>
+              <a href="/portifolio" className="text-primary hover:text-accent transition-colors">
+                Portifolio
               </a>
             </div>
           </nav>
