@@ -17,7 +17,6 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            {/* Desktop navigation */}
             <nav className="hidden md:flex space-x-8">
               <a href="/about" className="text-primary hover:text-accent transition-colors">
                 {t('nav.about')}
@@ -35,7 +34,6 @@ const Header = () => {
             
             <LanguageSwitcher />
             
-            {/* Mobile menu button */}
             <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -45,7 +43,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pt-4 pb-2">
             <div className="flex flex-col space-y-4">

@@ -6,7 +6,7 @@ import { useToast } from "./ui/use-toast";
 
 const packages = [
   {
-    name: "Basic Monitoring",
+    name: "basicmonitoring",
     price: "$500",
     period: "/month",
     description: "Perfect for small businesses starting with automation",
@@ -20,7 +20,7 @@ const packages = [
     highlight: false
   },
   {
-    name: "Advanced Infrastructure",
+    name: "advancedinfrastructure",
     price: "$1,200",
     period: "/month",
     description: "Ideal for growing companies needing robust infrastructure",
@@ -35,7 +35,7 @@ const packages = [
     highlight: true
   },
   {
-    name: "Enterprise Solutions",
+    name: "enterprisesolutions",
     price: "Custom",
     period: "",
     description: "Full-scale solution for enterprise requirements",
@@ -56,7 +56,6 @@ const PricingSection = () => {
   const { toast } = useToast();
 
   const handleGetStarted = (packageName: string) => {
-    // Here you would typically integrate with your CRM or email service
     console.log(`Quote requested for package: ${packageName}`);
     toast({
       title: t('contact.success'),
@@ -91,7 +90,7 @@ const PricingSection = () => {
                 </div>
               )}
               <CardHeader>
-                <CardTitle className="text-2xl">{t(`pricing.${pkg.name.toLowerCase().replace(' ', '')}.title`)}</CardTitle>
+                <CardTitle className="text-2xl">{t(`pricing.${pkg.name}.title`)}</CardTitle>
                 <CardDescription>{pkg.description}</CardDescription>
               </CardHeader>
               <CardContent>
