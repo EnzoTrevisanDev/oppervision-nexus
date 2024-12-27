@@ -26,6 +26,7 @@ const translations = {
     'pricing.cta.contact': 'Contact Sales',
     'pricing.cta.start': 'Request Quote',
     'contact.success': 'Thank you! Our team will contact you shortly.',
+    'portfolio.title': 'Our Portfolio'
   },
   'pt-BR': {
     'nav.about': 'Sobre',
@@ -44,6 +45,7 @@ const translations = {
     'pricing.cta.contact': 'Fale com Vendas',
     'pricing.cta.start': 'Solicitar Orçamento',
     'contact.success': 'Obrigado! Nossa equipe entrará em contato em breve.',
+    'portfolio.title': 'Nosso Portfólio'
   }
 };
 
