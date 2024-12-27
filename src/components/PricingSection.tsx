@@ -1,6 +1,8 @@
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useToast } from "./ui/use-toast";
 
 const packages = [
   {
@@ -50,13 +52,25 @@ const packages = [
 ];
 
 const PricingSection = () => {
+  const { t } = useLanguage();
+  const { toast } = useToast();
+
+  const handleGetStarted = (packageName: string) => {
+    // Here you would typically integrate with your CRM or email service
+    console.log(`Quote requested for package: ${packageName}`);
+    toast({
+      title: t('contact.success'),
+      duration: 5000,
+    });
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary mb-4">Transparent Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">{t('pricing.title')}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Choose the perfect plan for your business needs. All plans include our core features with different levels of support and customization.
+            {t('pricing.subtitle')}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -77,7 +91,7 @@ const PricingSection = () => {
                 </div>
               )}
               <CardHeader>
-                <CardTitle className="text-2xl">{pkg.name}</CardTitle>
+                <CardTitle className="text-2xl">{t(`pricing.${pkg.name.toLowerCase().replace(' ', '')}.title`)}</CardTitle>
                 <CardDescription>{pkg.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -101,20 +115,13 @@ const PricingSection = () => {
                       ? 'bg-accent hover:bg-accent/90' 
                       : ''
                   }`}
+                  onClick={() => handleGetStarted(pkg.name)}
                 >
-                  {pkg.price === "Custom" ? "Contact Sales" : "Get Started"}
+                  {pkg.price === "Custom" ? t('pricing.cta.contact') : t('pricing.cta.start')}
                 </Button>
               </CardFooter>
             </Card>
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
-            Need a custom solution? Let's discuss your specific requirements.
-          </p>
-          <Button variant="outline">
-            Schedule a Free Consultation
-          </Button>
         </div>
       </div>
     </section>
