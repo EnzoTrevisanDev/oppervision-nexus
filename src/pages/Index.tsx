@@ -3,10 +3,9 @@ import { Server, Cloud, ChartBar, Briefcase } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TestimonialCard from "../components/TestimonialCard";
-
+import PricingSection from "../components/PricingSection";
 
 const Index = () => {
-
   const services = [
     {
       icon: <Server className="w-6 h-6" />,
@@ -105,6 +104,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <PricingSection />
+
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="container">
@@ -116,6 +118,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
