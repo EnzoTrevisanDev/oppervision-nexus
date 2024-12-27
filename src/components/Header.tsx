@@ -2,6 +2,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,23 +14,23 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img src="/placeholder.svg" alt="Oppervision Logo" className="h-8 w-8"/>
-            <a href="/"><span className="text-2xl font-bold text-primary">Oppervision</span></a>
+            <Link to="/"><span className="text-2xl font-bold text-primary">Oppervision</span></Link>
           </div>
           
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex space-x-8">
-              <a href="/about" className="text-primary hover:text-accent transition-colors">
+              <Link to="/about" className="text-primary hover:text-accent transition-colors">
                 {t('nav.about')}
-              </a>
-              <a href="#services" className="text-primary hover:text-accent transition-colors">
+              </Link>
+              <Link to="/services" className="text-primary hover:text-accent transition-colors">
                 {t('nav.services')}
-              </a>
-              <a href="/contact" className="text-primary hover:text-accent transition-colors">
+              </Link>
+              <Link to="/contact" className="text-primary hover:text-accent transition-colors">
                 {t('nav.contact')}
-              </a>
-              <a href="/portfolio" className="text-primary hover:text-accent transition-colors">
+              </Link>
+              <Link to="/portfolio" className="text-primary hover:text-accent transition-colors">
                 {t('nav.portfolio')}
-              </a>
+              </Link>
             </nav>
             
             <LanguageSwitcher />
@@ -46,18 +47,18 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden pt-4 pb-2">
             <div className="flex flex-col space-y-4">
-              <a href="/about" className="text-primary hover:text-accent transition-colors">
+              <Link to="/about" className="text-primary hover:text-accent transition-colors">
                 {t('nav.about')}
-              </a>
-              <a href="#services" className="text-primary hover:text-accent transition-colors">
+              </Link>
+              <Link to="/services" className="text-primary hover:text-accent transition-colors">
                 {t('nav.services')}
-              </a>
-              <a href="/contact" className="text-primary hover:text-accent transition-colors">
+              </Link>
+              <Link to="/contact" className="text-primary hover:text-accent transition-colors">
                 {t('nav.contact')}
-              </a>
-              <a href="/portfolio" className="text-primary hover:text-accent transition-colors">
+              </Link>
+              <Link to="/portfolio" className="text-primary hover:text-accent transition-colors">
                 {t('nav.portfolio')}
-              </a>
+              </Link>
             </div>
           </nav>
         )}
