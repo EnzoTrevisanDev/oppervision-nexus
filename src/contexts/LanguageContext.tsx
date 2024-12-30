@@ -67,7 +67,7 @@ const translations = {
     
     // Portfolio
     'portfolio.title': 'Our Portfolio',
-    'portfolio.subtitle': 'See how we've helped businesses transform their IT infrastructure',
+    'portfolio.subtitle': 'See how we have helped businesses transform their IT infrastructure',
     'portfolio.viewProject': 'View Project',
     'portfolio.cta': 'Want to see your project here?',
   },
