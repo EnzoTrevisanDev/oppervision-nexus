@@ -9,39 +9,39 @@ const Portfolio = () => {
 
   const projects = [
     {
-      category: "Monitoring Automation",
+      category: t('portfolio.categories.monitoring'),
       icon: <Monitor className="w-6 h-6" />,
-      title: "StartupBR Monitoring Implementation",
-      description: "Zabbix and Grafana implementation, reducing false alerts by 30%",
-      impact: "30% reduction in false alerts",
+      titleKey: 'portfolio.projects.startupbr.title',
+      descriptionKey: 'portfolio.projects.startupbr.description',
+      impactKey: 'portfolio.projects.startupbr.impact',
       testimonial: {
-        content: "The monitoring solution implemented by Oppervision has significantly improved our operational efficiency.",
-        author: "John Doe",
-        role: "CTO, StartupBR"
+        contentKey: 'portfolio.projects.startupbr.testimonial.content',
+        authorKey: 'portfolio.projects.startupbr.testimonial.author',
+        roleKey: 'portfolio.projects.startupbr.testimonial.role'
       }
     },
     {
-      category: "Cloud Computing",
+      category: t('portfolio.categories.cloud'),
       icon: <Cloud className="w-6 h-6" />,
-      title: "TechCorp AWS Migration",
-      description: "Complete AWS infrastructure setup and migration",
-      impact: "40% reduction in infrastructure costs",
+      titleKey: 'portfolio.projects.techcorp.title',
+      descriptionKey: 'portfolio.projects.techcorp.description',
+      impactKey: 'portfolio.projects.techcorp.impact',
       testimonial: {
-        content: "Oppervision's expertise in AWS helped us achieve substantial cost savings while improving performance.",
-        author: "Jane Smith",
-        role: "IT Director, TechCorp"
+        contentKey: 'portfolio.projects.techcorp.testimonial.content',
+        authorKey: 'portfolio.projects.techcorp.testimonial.author',
+        roleKey: 'portfolio.projects.techcorp.testimonial.role'
       }
     },
     {
-      category: "Kubernetes Infrastructure",
+      category: t('portfolio.categories.kubernetes'),
       icon: <Container className="w-6 h-6" />,
-      title: "InnovaTech API Scaling",
-      description: "Development of an API in a Kubernetes environment",
-      impact: "200% improvement in scalability",
+      titleKey: 'portfolio.projects.innovatech.title',
+      descriptionKey: 'portfolio.projects.innovatech.description',
+      impactKey: 'portfolio.projects.innovatech.impact',
       testimonial: {
-        content: "The Kubernetes implementation has transformed how we handle our services scaling.",
-        author: "Mike Johnson",
-        role: "Lead Developer, InnovaTech"
+        contentKey: 'portfolio.projects.innovatech.testimonial.content',
+        authorKey: 'portfolio.projects.innovatech.testimonial.author',
+        roleKey: 'portfolio.projects.innovatech.testimonial.role'
       }
     }
   ];
@@ -58,7 +58,7 @@ const Portfolio = () => {
           >
             <h1 className="text-4xl font-bold text-primary mb-4">{t('portfolio.title')}</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Oppervision delivers exceptional results for companies of all sizes. Check out our latest projects.
+              {t('portfolio.subtitle')}
             </p>
           </motion.div>
 
@@ -78,19 +78,19 @@ const Portfolio = () => {
                     </div>
                     <span className="text-sm font-medium text-accent">{project.category}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-primary mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-semibold text-primary mb-2">{t(project.titleKey)}</h3>
+                  <p className="text-gray-600 mb-4">{t(project.descriptionKey)}</p>
                   <div className="bg-secondary p-3 rounded-lg mb-4">
-                    <p className="text-sm font-medium text-primary">Impact:</p>
-                    <p className="text-accent">{project.impact}</p>
+                    <p className="text-sm font-medium text-primary">{t('portfolio.impact')}:</p>
+                    <p className="text-accent">{t(project.impactKey)}</p>
                   </div>
                   <div className="border-t pt-4">
                     <div className="flex items-start gap-2">
                       <Star className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-gray-600 text-sm italic">{project.testimonial.content}</p>
-                        <p className="text-sm font-medium text-primary mt-2">{project.testimonial.author}</p>
-                        <p className="text-sm text-gray-500">{project.testimonial.role}</p>
+                        <p className="text-gray-600 text-sm italic">{t(project.testimonial.contentKey)}</p>
+                        <p className="text-sm font-medium text-primary mt-2">{t(project.testimonial.authorKey)}</p>
+                        <p className="text-sm text-gray-500">{t(project.testimonial.roleKey)}</p>
                       </div>
                     </div>
                   </div>
@@ -104,12 +104,12 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mt-16"
           >
-            <h2 className="text-2xl font-bold text-primary mb-4">Want to see your project here?</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">{t('portfolio.cta')}</h2>
             <a
               href="/contact"
               className="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium transition-colors"
             >
-              Get in Touch
+              {t('portfolio.cta.button')}
             </a>
           </motion.div>
         </div>

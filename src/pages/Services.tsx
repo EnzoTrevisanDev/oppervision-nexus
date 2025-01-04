@@ -13,43 +13,27 @@ const Services = () => {
   const services = [
     {
       icon: <Monitor className="w-8 h-8" />,
-      title: "Monitoring Automation",
-      description: "Implementation and configuration of tools such as Zabbix, Prometheus and Grafana.",
-      benefits: [
-        "Rapid identification of problems",
-        "Reduced downtime",
-        "Visual and actionable data"
-      ]
+      titleKey: 'services.monitoring.title',
+      descriptionKey: 'services.monitoring.description',
+      benefitsKey: 'services.monitoring.benefits'
     },
     {
       icon: <Container className="w-8 h-8" />,
-      title: "Kubernetes Infrastructure",
-      description: "Container orchestration with Kubernetes for scalability and efficiency.",
-      benefits: [
-        "Automated deployment",
-        "High availability",
-        "Reduced operational costs"
-      ]
+      titleKey: 'services.kubernetes.title',
+      descriptionKey: 'services.kubernetes.description',
+      benefitsKey: 'services.kubernetes.benefits'
     },
     {
       icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Computing Solutions",
-      description: "Configuration and optimization of environments in AWS, Azure and GCP.",
-      benefits: [
-        "Reduced costs",
-        "Scalability and flexibility",
-        "Increased security"
-      ]
+      titleKey: 'services.cloud.title',
+      descriptionKey: 'services.cloud.description',
+      benefitsKey: 'services.cloud.benefits'
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
-      title: "Customized Consulting",
-      description: "Detailed analysis of your company's needs with tailored solutions.",
-      benefits: [
-        "Complete infrastructure diagnosis",
-        "Tailor-made solutions",
-        "Ongoing technical support"
-      ]
+      titleKey: 'services.consulting.title',
+      descriptionKey: 'services.consulting.description',
+      benefitsKey: 'services.consulting.benefits'
     }
   ];
 
@@ -63,9 +47,9 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl font-bold text-primary mb-4">Our Services</h1>
+            <h1 className="text-4xl font-bold text-primary mb-4">{t('services.title')}</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Oppervision offers tailored solutions to meet your company's needs, using cutting-edge technologies and best practices.
+              {t('services.subtitle')}
             </p>
           </motion.div>
 
@@ -82,14 +66,14 @@ const Services = () => {
                   <div className="p-2 bg-accent/10 rounded-lg text-accent">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-primary">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-primary">{t(service.titleKey)}</h3>
                 </div>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-gray-600 mb-4">{t(service.descriptionKey)}</p>
                 <div className="space-y-2">
-                  {service.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-gray-700">
+                  {[1, 2, 3].map((benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center gap-2 text-gray-700">
                       <CheckCircle2 className="w-5 h-5 text-accent" />
-                      <span>{benefit}</span>
+                      <span>{t(`${service.benefitsKey}.${benefitIndex}`)}</span>
                     </div>
                   ))}
                 </div>
@@ -102,13 +86,13 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h2 className="text-2xl font-bold text-primary mb-4">Need customized solutions?</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">{t('services.cta.title')}</h2>
             <Button
               size="lg"
               onClick={() => navigate("/contact")}
               className="bg-accent hover:bg-accent/90"
             >
-              Contact Us Now
+              {t('services.cta.button')}
             </Button>
           </motion.div>
         </section>

@@ -4,21 +4,22 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Github } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message sent!",
-        description: "Thank you for contacting us! We will respond as soon as possible.",
+        title: t('contact.success.title'),
+        description: t('contact.success.description'),
       });
       (e.target as HTMLFormElement).reset();
     }, 1000);
@@ -27,20 +28,20 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="w-5 h-5" />,
-      label: "Email",
-      value: "contato@oppervision.com",
+      labelKey: 'contact.info.email.label',
+      valueKey: 'contact.info.email.value',
       href: "mailto:contato@oppervision.com"
     },
     {
       icon: <Phone className="w-5 h-5" />,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
+      labelKey: 'contact.info.phone.label',
+      valueKey: 'contact.info.phone.value',
       href: "tel:+15551234567"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
-      label: "Address",
-      value: "123 Tech Street, Innovation City",
+      labelKey: 'contact.info.address.label',
+      valueKey: 'contact.info.address.value',
       href: "#"
     }
   ];
@@ -49,17 +50,17 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-6 h-6" />,
       href: "https://linkedin.com",
-      label: "LinkedIn"
+      labelKey: "contact.social.linkedin"
     },
     {
       icon: <Instagram className="w-6 h-6" />,
       href: "https://instagram.com",
-      label: "Instagram"
+      labelKey: "contact.social.instagram"
     },
     {
       icon: <Github className="w-6 h-6" />,
       href: "https://github.com",
-      label: "GitHub"
+      labelKey: "contact.social.github"
     }
   ];
 
@@ -73,9 +74,9 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
+            <h1 className="text-4xl font-bold text-primary mb-4">{t('contact.title')}</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ready to transform your IT? Get in touch with us today and let's discuss how we can help your business grow.
+              {t('contact.subtitle')}
             </p>
           </motion.div>
 
@@ -86,11 +87,11 @@ const Contact = () => {
               className="space-y-8"
             >
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <h2 className="text-2xl font-semibold text-primary mb-6">Get in Touch</h2>
+                <h2 className="text-2xl font-semibold text-primary mb-6">{t('contact.form.title')}</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Full Name *
+                      {t('contact.form.name')} *
                     </label>
                     <input
                       type="text"
@@ -101,7 +102,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email *
+                      {t('contact.form.email')} *
                     </label>
                     <input
                       type="email"
@@ -112,7 +113,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone (optional)
+                      {t('contact.form.phone')}
                     </label>
                     <input
                       type="tel"
@@ -122,7 +123,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message *
+                      {t('contact.form.message')} *
                     </label>
                     <textarea
                       id="message"
@@ -136,7 +137,7 @@ const Contact = () => {
                     disabled={isSubmitting}
                     className="w-full bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium transition-colors disabled:opacity-50"
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
                   </button>
                 </form>
               </div>
@@ -148,7 +149,7 @@ const Contact = () => {
               className="space-y-8"
             >
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <h2 className="text-2xl font-semibold text-primary mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-semibold text-primary mb-6">{t('contact.info.title')}</h2>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <a
@@ -160,8 +161,8 @@ const Contact = () => {
                         {info.icon}
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">{info.label}</p>
-                        <p className="text-gray-600">{info.value}</p>
+                        <p className="font-medium text-gray-900">{t(info.labelKey)}</p>
+                        <p className="text-gray-600">{t(info.valueKey)}</p>
                       </div>
                     </a>
                   ))}
@@ -169,7 +170,7 @@ const Contact = () => {
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <h2 className="text-2xl font-semibold text-primary mb-6">Follow Us</h2>
+                <h2 className="text-2xl font-semibold text-primary mb-6">{t('contact.social.title')}</h2>
                 <div className="flex justify-center gap-6">
                   {socialLinks.map((social, index) => (
                     <a
@@ -178,7 +179,7 @@ const Contact = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-accent/10 rounded-lg text-accent hover:bg-accent/20 transition-colors"
-                      aria-label={social.label}
+                      aria-label={t(social.labelKey)}
                     >
                       {social.icon}
                     </a>
