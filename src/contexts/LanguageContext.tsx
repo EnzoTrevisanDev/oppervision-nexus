@@ -8,7 +8,6 @@ type LanguageContextType = {
 
 const translations = {
   'en': {
-    // SEO
     'meta.title': 'Oppervision - IT Infrastructure & Automation Solutions',
     'meta.description': 'Expert IT consulting, infrastructure automation, and monitoring solutions for businesses of all sizes.',
     
@@ -36,7 +35,18 @@ const translations = {
     'services.consulting.title': 'Custom Consulting',
     'services.consulting.description': 'Diagnosis and planning for IT infrastructure improvement.',
     
-    // Pricing
+    // Testimonials
+    'testimonials.title': 'What Our Clients Say',
+    'testimonials.1.name': 'John Smith',
+    'testimonials.1.role': 'CTO, TechCorp',
+    'testimonials.1.content': 'Oppervision completely transformed our IT infrastructure. Efficiency increased by 200% since we started working together.',
+    'testimonials.2.name': 'Sarah Johnson',
+    'testimonials.2.role': 'Operations Director, InnovaTech',
+    'testimonials.2.content': 'Excellent support and customized solutions that really meet our business needs.',
+    'testimonials.3.name': 'Michael Brown',
+    'testimonials.3.role': 'CEO, StartupX',
+    'testimonials.3.content': 'The team expertise in cloud computing helped us scale our services safely and efficiently.',
+
     'pricing.title': 'Pricing',
     'pricing.subtitle': 'Choose a package that fits your needs',
     'pricing.basicmonitoring.title': 'Basic Monitoring',
@@ -71,14 +81,8 @@ const translations = {
     'portfolio.viewProject': 'View Project',
     'portfolio.cta': 'Want to see your project here?',
 
-    // Testimonials
-    'testimonials.title': 'What Our Clients Say',
-    'testimonials.1': 'Oppervision completely transformed our IT infrastructure. Efficiency increased by 200% since we started working together.',
-    'testimonials.2': 'Excellent support and customized solutions that really meet our business needs.',
-    'testimonials.3': 'The team expertise in cloud computing helped us scale our services safely and efficiently.',
   },
   'pt-BR': {
-    // SEO
     'meta.title': 'Oppervision - Soluções em Infraestrutura de TI e Automação',
     'meta.description': 'Consultoria especializada em TI, automação de infraestrutura e soluções de monitoramento para empresas.',
     
@@ -106,7 +110,18 @@ const translations = {
     'services.consulting.title': 'Consultoria Personalizada',
     'services.consulting.description': 'Diagnóstico e planejamento para melhoria da infraestrutura de TI.',
     
-    // Pricing
+    // Testimonials
+    'testimonials.title': 'O Que Nossos Clientes Dizem',
+    'testimonials.1.name': 'João Silva',
+    'testimonials.1.role': 'CTO, TechCorp',
+    'testimonials.1.content': 'A Oppervision transformou completamente nossa infraestrutura de TI. A eficiência aumentou em 200% desde que começamos a trabalhar juntos.',
+    'testimonials.2.name': 'Maria Santos',
+    'testimonials.2.role': 'Diretora de Operações, InnovaTech',
+    'testimonials.2.content': 'Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio.',
+    'testimonials.3.name': 'Pedro Oliveira',
+    'testimonials.3.role': 'CEO, StartupBR',
+    'testimonials.3.content': 'A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente.',
+
     'pricing.title': 'Preços',
     'pricing.subtitle': 'Escolha um pacote que atenda às suas necessidades',
     'pricing.basicmonitoring.title': 'Monitoramento Básico',
@@ -140,12 +155,6 @@ const translations = {
     'portfolio.subtitle': 'Veja como ajudamos empresas a transformar sua infraestrutura de TI',
     'portfolio.viewProject': 'Ver Projeto',
     'portfolio.cta': 'Quer ver seu projeto aqui?',
-
-    // Testimonials
-    'testimonials.title': 'O Que Nossos Clientes Dizem',
-    'testimonials.1': 'A Oppervision transformou completamente nossa infraestrutura de TI. A eficiência aumentou em 200% desde que começamos a trabalhar juntos.',
-    'testimonials.2': 'Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio.',
-    'testimonials.3': 'A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente.',
   }
 };
 

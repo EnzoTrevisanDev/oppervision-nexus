@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import TestimonialCard from "../components/TestimonialCard";
 import PricingSection from "../components/PricingSection";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -34,19 +36,19 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "João Silva",
-      role: "CTO, TechCorp",
-      content: t('testimonials.1')
+      name: t('testimonials.1.name'),
+      role: t('testimonials.1.role'),
+      content: t('testimonials.1.content')
     },
     {
-      name: "Maria Santos",
-      role: "Diretora de Operações, InnovaTech",
-      content: t('testimonials.2')
+      name: t('testimonials.2.name'),
+      role: t('testimonials.2.role'),
+      content: t('testimonials.2.content')
     },
     {
-      name: "Pedro Oliveira",
-      role: "CEO, StartupBR",
-      content: t('testimonials.3')
+      name: t('testimonials.3.name'),
+      role: t('testimonials.3.role'),
+      content: t('testimonials.3.content')
     }
   ];
 
@@ -70,16 +72,16 @@ const Index = () => {
               {t('home.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact">
-                <button className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+              <Link to="/contact">
+                <Button className="bg-accent hover:bg-accent/90">
                   {t('home.cta.meeting')}
-                </button>
-              </a>
-              <a href="/portfolio">
-                <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                </Button>
+              </Link>
+              <Link to="/portfolio">
+                <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
                   {t('home.cta.portfolio')}
-                </button>
-              </a>
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
