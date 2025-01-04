@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Github } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { sendEmail } from "@/api/sendEmail";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,14 +16,30 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      await sendEmail(data);
       toast({
         title: t('contact.success.title'),
         description: t('contact.success.description'),
       });
       (e.target as HTMLFormElement).reset();
-    }, 1000);
+    } catch (error) {
+      toast({
+        title: t('contact.error.title'),
+        description: t('contact.error.description'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -96,6 +113,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
                       className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent"
                     />
@@ -107,6 +125,7 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
                       className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent"
                     />
@@ -118,6 +137,7 @@ const Contact = () => {
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
                       className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent"
                     />
                   </div>
@@ -127,6 +147,7 @@ const Contact = () => {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       required
                       rows={4}
                       className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent"
