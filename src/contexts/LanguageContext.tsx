@@ -70,6 +70,12 @@ const translations = {
     'portfolio.subtitle': 'See how we have helped businesses transform their IT infrastructure',
     'portfolio.viewProject': 'View Project',
     'portfolio.cta': 'Want to see your project here?',
+
+    // Testimonials
+    'testimonials.title': 'What Our Clients Say',
+    'testimonials.1': 'Oppervision completely transformed our IT infrastructure. Efficiency increased by 200% since we started working together.',
+    'testimonials.2': 'Excellent support and customized solutions that really meet our business needs.',
+    'testimonials.3': 'The team expertise in cloud computing helped us scale our services safely and efficiently.',
   },
   'pt-BR': {
     // SEO
@@ -134,6 +140,12 @@ const translations = {
     'portfolio.subtitle': 'Veja como ajudamos empresas a transformar sua infraestrutura de TI',
     'portfolio.viewProject': 'Ver Projeto',
     'portfolio.cta': 'Quer ver seu projeto aqui?',
+
+    // Testimonials
+    'testimonials.title': 'O Que Nossos Clientes Dizem',
+    'testimonials.1': 'A Oppervision transformou completamente nossa infraestrutura de TI. A eficiência aumentou em 200% desde que começamos a trabalhar juntos.',
+    'testimonials.2': 'Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio.',
+    'testimonials.3': 'A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente.',
   }
 };
 

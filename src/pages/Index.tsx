@@ -4,28 +4,31 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TestimonialCard from "../components/TestimonialCard";
 import PricingSection from "../components/PricingSection";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: <Server className="w-6 h-6" />,
-      title: "Automação de Monitoramento",
-      description: "Implementação de Zabbix, Prometheus e Grafana para monitoramento proativo."
+      title: t('services.monitoring.title'),
+      description: t('services.monitoring.description')
     },
     {
       icon: <Cloud className="w-6 h-6" />,
-      title: "Infraestrutura em Kubernetes",
-      description: "Orquestração de containers para maior escalabilidade e eficiência."
+      title: t('services.kubernetes.title'),
+      description: t('services.kubernetes.description')
     },
     {
       icon: <ChartBar className="w-6 h-6" />,
-      title: "Soluções em Cloud Computing",
-      description: "Configuração e otimização de ambientes na AWS, Azure e GCP."
+      title: t('services.cloud.title'),
+      description: t('services.cloud.description')
     },
     {
       icon: <Briefcase className="w-6 h-6" />,
-      title: "Consultoria Personalizada",
-      description: "Diagnóstico e planejamento para melhoria da infraestrutura de TI."
+      title: t('services.consulting.title'),
+      description: t('services.consulting.description')
     }
   ];
 
@@ -33,17 +36,17 @@ const Index = () => {
     {
       name: "João Silva",
       role: "CTO, TechCorp",
-      content: "A Oppervision transformou completamente nossa infraestrutura de TI. A eficiência aumentou em 200% desde que começamos a trabalhar juntos."
+      content: t('testimonials.1')
     },
     {
       name: "Maria Santos",
       role: "Diretora de Operações, InnovaTech",
-      content: "Excelente suporte e soluções personalizadas que realmente atendem às necessidades do nosso negócio."
+      content: t('testimonials.2')
     },
     {
       name: "Pedro Oliveira",
       role: "CEO, StartupBR",
-      content: "A expertise da equipe em cloud computing nos ajudou a escalar nossos serviços de forma segura e eficiente."
+      content: t('testimonials.3')
     }
   ];
 
@@ -61,18 +64,22 @@ const Index = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Consultoria em TI e Automação
+              {t('home.hero.title')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
-              Simplificamos sua infraestrutura com soluções escaláveis e monitoramento inteligente
+              {t('home.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact"><button className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                Agende uma reunião gratuita
-              </button></a>
-              <a href="/portifolio"><button className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                Explore nosso portfólio
-              </button></a>
+              <a href="/contact">
+                <button className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                  {t('home.cta.meeting')}
+                </button>
+              </a>
+              <a href="/portfolio">
+                <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                  {t('home.cta.portfolio')}
+                </button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -81,7 +88,7 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-20 bg-secondary">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">Nossos Serviços</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">{t('services.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -110,7 +117,7 @@ const Index = () => {
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">O Que Nossos Clientes Dizem</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">{t('testimonials.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard key={index} {...testimonial} />
