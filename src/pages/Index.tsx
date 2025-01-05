@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TestimonialCard from "../components/TestimonialCard";
 import PricingSection from "../components/PricingSection";
+import ContactForm from "../components/ContactForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -125,6 +126,25 @@ const Index = () => {
               <TestimonialCard key={index} {...testimonial} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-6">{t('contact.title')}</h2>
+            <p className="text-lg text-gray-600 mb-8">
+              {t('contact.subtitle')}
+            </p>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <ContactForm />
+            </div>
+          </motion.div>
         </div>
       </section>
 
