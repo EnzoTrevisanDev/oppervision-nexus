@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-const CORP_EMAIL = "contato@oppervision.com"; // Replace with your actual email
+const CORP_EMAIL = "enzotrevisan.sk8@gmail.com"; // Your verified email for testing
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -34,8 +34,8 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Oppervision Website <onboarding@resend.dev>",
-        to: [CORP_EMAIL],
-        subject: `New contact from ${data.name}`,
+        to: [CORP_EMAIL], // Send to your verified email
+        subject: `New Contact Form Submission from ${data.name}`,
         html: `
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${data.name}</p>
@@ -43,12 +43,16 @@ const handler = async (req: Request): Promise<Response> => {
           ${data.phone ? `<p><strong>Phone:</strong> ${data.phone}</p>` : ''}
           <p><strong>Message:</strong></p>
           <p>${data.message}</p>
+          <hr>
+          <p><small>This email was sent from the Oppervision website contact form.</small></p>
         `,
+        reply_to: data.email, // Allow replying directly to the sender
       }),
     });
 
     if (res.ok) {
       const responseData = await res.json();
+      console.log("Email sent successfully:", responseData);
       return new Response(JSON.stringify(responseData), {
         status: 200,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
