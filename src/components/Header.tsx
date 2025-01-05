@@ -13,8 +13,14 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src="/placeholder.svg" alt="Oppervision Logo" className="h-8 w-8"/>
-            <Link to="/"><span className="text-2xl font-bold text-primary">Oppervision</span></Link>
+            <Link to="/" className="flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/ae0c9ab8-14e8-47d7-abff-65cdffa50371.png" 
+                alt="Oppervision Logo" 
+                className="h-8 w-8 object-contain"
+              />
+              <span className="text-2xl font-bold text-primary">Oppervision</span>
+            </Link>
           </div>
           
           <div className="flex items-center gap-4">
