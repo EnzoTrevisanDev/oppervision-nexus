@@ -73,7 +73,7 @@ export const ptTranslations = {
   'contact.form.submitting': 'Enviando...',
   'contact.success.title': 'Mensagem Enviada!',
   'contact.success.description': 'Obrigado por entrar em contato! Responderemos o mais breve possível.',
-  'contact.info.email.value':'enzo.trevisan@oppervision.com.br',ss
+  'contact.info.email.value':'enzo.trevisan@oppervision.com.br',
   
   // Portfolio
   'portfolio.title': 'Nosso Portfólio',
