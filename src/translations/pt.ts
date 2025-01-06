@@ -8,12 +8,29 @@ export const ptTranslations = {
   'nav.contact': 'Contato',
   'nav.portfolio': 'Portfólio',
   
-  // Home Page
-  'home.hero.title': 'Consultoria em TI e Automação',
-  'home.hero.subtitle': 'Simplificamos sua infraestrutura com soluções escaláveis e monitoramento inteligente',
-  'home.cta.meeting': 'Agende uma Reunião Gratuita',
-  'home.cta.portfolio': 'Explore Nosso Portfólio',
-  
+  // About Page
+  'about.title': 'Sobre Nós',
+  'about.description': 'A Oppervision é uma empresa de consultoria especializada em tecnologia da informação e automação, dedicada a oferecer soluções inteligentes e escaláveis para empresas de todos os portes.',
+  'about.history.title': 'Nossa História',
+  'about.history.text': 'Fundada em 2015, a Oppervision cresceu de uma pequena consultoria de TI para uma líder em soluções de automação de infraestrutura, atendendo clientes em diversos setores.',
+  'about.team.title': 'Nossa Equipe',
+  'about.team.text': 'Nossa equipe é formada por profissionais certificados com vasta experiência em computação em nuvem, automação de infraestrutura e consultoria em TI.',
+  'about.differentials.title': 'Nossos Diferenciais',
+  'about.differentials.customized.title': 'Soluções Personalizadas',
+  'about.differentials.customized.text': 'Desenvolvemos soluções sob medida para suas necessidades e desafios específicos.',
+  'about.differentials.modern.title': 'Tecnologias Modernas',
+  'about.differentials.modern.text': 'Utilizamos tecnologias de ponta para garantir os melhores resultados para nossos clientes.',
+  'about.differentials.experienced.title': 'Equipe Experiente',
+  'about.differentials.experienced.text': 'Nossa equipe traz anos de experiência em projetos complexos de infraestrutura de TI.',
+  'about.mission.title': 'Missão',
+  'about.mission.text': 'Transformar e simplificar a infraestrutura de TI através de soluções inovadoras de automação.',
+  'about.vision.title': 'Visão',
+  'about.vision.text': 'Ser referência global em automação de infraestrutura de TI e serviços de consultoria.',
+  'about.values.title': 'Valores',
+  'about.values.text': 'Inovação, Excelência, Integridade e Sucesso do Cliente.',
+  'about.cta.text': 'Pronto para transformar sua infraestrutura de TI?',
+  'about.cta.button': 'Entre em Contato Agora',
+
   // Services
   'services.title': 'Nossos Serviços',
   'services.subtitle': 'A Oppervision oferece soluções personalizadas usando tecnologias de ponta',

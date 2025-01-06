@@ -8,12 +8,29 @@ export const enTranslations = {
   'nav.contact': 'Contact',
   'nav.portfolio': 'Portfolio',
   
-  // Home Page
-  'home.hero.title': 'IT Consulting & Automation',
-  'home.hero.subtitle': 'We simplify your infrastructure with scalable solutions and intelligent monitoring',
-  'home.cta.meeting': 'Schedule a Free Meeting',
-  'home.cta.portfolio': 'Explore Our Portfolio',
-  
+  // About Page
+  'about.title': 'About Us',
+  'about.description': 'Oppervision is a consulting company specialized in information technology and automation, dedicated to offering intelligent and scalable solutions for companies of all sizes.',
+  'about.history.title': 'Our History',
+  'about.history.text': 'Founded in 2015, Oppervision has grown from a small IT consulting firm to a leading provider of infrastructure automation solutions, serving clients across multiple industries.',
+  'about.team.title': 'Our Team',
+  'about.team.text': 'Our team consists of certified professionals with extensive experience in cloud computing, infrastructure automation, and IT consulting.',
+  'about.differentials.title': 'Our Differentials',
+  'about.differentials.customized.title': 'Customized Solutions',
+  'about.differentials.customized.text': 'We develop solutions tailored to your specific needs and challenges.',
+  'about.differentials.modern.title': 'Modern Technologies',
+  'about.differentials.modern.text': 'We use cutting-edge technologies to ensure the best results for our clients.',
+  'about.differentials.experienced.title': 'Experienced Team',
+  'about.differentials.experienced.text': 'Our team brings years of experience in complex IT infrastructure projects.',
+  'about.mission.title': 'Mission',
+  'about.mission.text': 'To transform and simplify IT infrastructure through innovative automation solutions.',
+  'about.vision.title': 'Vision',
+  'about.vision.text': 'To be a global reference in IT infrastructure automation and consulting services.',
+  'about.values.title': 'Values',
+  'about.values.text': 'Innovation, Excellence, Integrity, and Client Success.',
+  'about.cta.text': 'Ready to transform your IT infrastructure?',
+  'about.cta.button': 'Contact Us Now',
+
   // Services
   'services.title': 'Our Services',
   'services.subtitle': 'Oppervision offers tailored solutions using cutting-edge technologies',
@@ -62,17 +79,6 @@ export const enTranslations = {
   'pricing.enterprisesolutions.title': 'Enterprise Solutions',
   'pricing.cta.start': 'Get Started',
   'pricing.cta.contact': 'Contact Us',
-  
-  // About
-  'about.title': 'About Us',
-  'about.description': 'Oppervision is a consulting company specialized in information technology and automation, dedicated to offering intelligent and scalable solutions for companies of all sizes.',
-  'about.subtitle': 'Transforming IT environments into strategic assets',
-  'about.mission.title': 'Mission',
-  'about.mission.text': 'Simplify IT infrastructure with customized and efficient solutions.',
-  'about.vision.title': 'Vision',
-  'about.vision.text': 'To be a global reference in IT consulting and automation.',
-  'about.values.title': 'Values',
-  'about.values.text': 'Commitment, innovation, transparency and results-focused.',
   
   // Contact
   'contact.title': 'Contact Us',
