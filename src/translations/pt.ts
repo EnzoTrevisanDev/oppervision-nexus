@@ -65,6 +65,16 @@ export const ptTranslations = {
   'contact.title': 'Entre em Contato',
   'contact.subtitle': 'Pronto para transformar sua TI? Fale conosco.',
   'contact.info.title': 'Informações de Contato',
+  'contact.info.email.label': 'Email',
+  'contact.info.email.value': 'contato@oppervision.com',
+  'contact.info.phone.label': 'Telefone',
+  'contact.info.phone.value': '+55 (11) 99999-9999',
+  'contact.info.address.label': 'Endereço',
+  'contact.info.address.value': 'Rua da Tecnologia, 123 - São Paulo, SP',
+  'contact.social.title': 'Siga-nos',
+  'contact.social.linkedin': 'Perfil do LinkedIn',
+  'contact.social.instagram': 'Perfil do Instagram',
+  'contact.social.github': 'Perfil do GitHub',
   'contact.form.name': 'Nome Completo',
   'contact.form.email': 'Email',
   'contact.form.phone': 'Telefone (opcional)',
@@ -73,8 +83,7 @@ export const ptTranslations = {
   'contact.form.submitting': 'Enviando...',
   'contact.success.title': 'Mensagem Enviada!',
   'contact.success.description': 'Obrigado por entrar em contato! Responderemos o mais breve possível.',
-  'contact.info.email.value':'enzo.trevisan@oppervision.com.br',
-  
+
   // Portfolio
   'portfolio.title': 'Nosso Portfólio',
   'portfolio.subtitle': 'Veja como ajudamos empresas a transformar sua infraestrutura de TI',
