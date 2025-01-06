@@ -39,6 +39,8 @@ export const enTranslations = {
   'services.consulting.benefits.3': 'Ongoing technical support',
   'services.cta.title': 'Need customized solutions?',
   'services.cta.button': 'Contact Us Now',
+  'services.contact.email': 'contact@oppervision.com',
+  'services.contact.phone': '+1 (555) 123-4567',
 
   // Testimonials
   'testimonials.title': 'What Our Clients Say',
@@ -52,6 +54,7 @@ export const enTranslations = {
   'testimonials.3.role': 'CEO, StartupX',
   'testimonials.3.content': 'The team expertise in cloud computing helped us scale our services safely and efficiently.',
 
+  // Pricing
   'pricing.title': 'Pricing',
   'pricing.subtitle': 'Choose a package that fits your needs',
   'pricing.basicmonitoring.title': 'Basic Monitoring',

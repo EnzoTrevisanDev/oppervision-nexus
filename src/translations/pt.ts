@@ -39,6 +39,8 @@ export const ptTranslations = {
   'services.consulting.benefits.3': 'Suporte técnico contínuo',
   'services.cta.title': 'Precisa de soluções personalizadas?',
   'services.cta.button': 'Entre em Contato Agora',
+  'services.contact.email': 'contato@oppervision.com',
+  'services.contact.phone': '+55 (11) 99999-9999',
 
   // Testimonials
   'testimonials.title': 'O Que Nossos Clientes Dizem',
