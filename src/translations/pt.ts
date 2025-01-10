@@ -2,6 +2,12 @@ export const ptTranslations = {
   'meta.title': 'Oppervision - Soluções em Infraestrutura de TI e Automação',
   'meta.description': 'Consultoria especializada em TI, automação de infraestrutura e soluções de monitoramento para empresas.',
   
+  //Home page
+  'home.hero.title': 'Consultoria em TI e Automação',
+  'home.hero.subtitle':'Simplificamos sua infraestrutura com soluções escaláveis e monitoramento inteligente',
+  'home.cta.meeting':'Agende uma reunião gratuita',
+  'home.cta.portfolio':'Explore nosso portfólio',
+
   // Navigation
   'nav.about': 'Sobre',
   'nav.services': 'Serviços',
