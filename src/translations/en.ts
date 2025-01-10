@@ -96,4 +96,37 @@ export const enTranslations = {
   'contact.form.submitting': 'Sending...',
   'contact.success.title': 'Message Sent!',
   'contact.success.description': 'Thank you for contacting us! We will respond as soon as possible.',
+
+  // Portfolio
+  'portfolio.title': 'My Portfolio',
+  'portfolio.subtitle': 'Check out some of my personal projects and their impact',
+  'portfolio.impact': 'Impact',
+  'portfolio.status': 'Status',
+  'portfolio.repository': 'Repository',
+  'portfolio.inDevelopment': 'In Development',
+  
+  'portfolio.categories.automation': 'Automation',
+  'portfolio.categories.monitoring': 'Monitoring',
+  'portfolio.categories.reporting': 'Reporting',
+  'portfolio.categories.dashboard': 'Dashboard',
+
+  'portfolio.projects.email.title': 'Email Sending Automation',
+  'portfolio.projects.email.description': 'Complete automation for sending personalized emails with integration with multiple SMTP services.',
+  'portfolio.projects.email.impact.1': '50% reduction in time spent manually sending emails',
+  'portfolio.projects.email.impact.2': 'Greater accuracy and consistency in contact with customers',
+
+  'portfolio.projects.kubernetes.title': 'API Monitoring in Kubernetes',
+  'portfolio.projects.kubernetes.description': 'API monitoring using Kubernetes with automatic alerts and integration with tools such as Prometheus and Grafana.',
+  'portfolio.projects.kubernetes.impact.1': '30% increase in efficiency in responding to problems in production',
+  'portfolio.projects.kubernetes.impact.2': 'Greater scalability for critical systems',
+
+  'portfolio.projects.reports.title': 'Automated Report Generation',
+  'portfolio.projects.reports.description': 'API for creating and sending customized reports in an automated way.',
+  'portfolio.projects.reports.impact.1': 'Time savings for administrative teams',
+  'portfolio.projects.reports.impact.2': '20% reduction in reporting costs',
+
+  'portfolio.projects.traffic.title': 'Real-Time Network Traffic Dashboard',
+  'portfolio.projects.traffic.description': 'Python and Streamlit application for real-time monitoring of network traffic, including dynamic visualizations and detailed metrics.',
+  'portfolio.projects.traffic.impact.1': 'Rapid detection of network bottlenecks',
+  'portfolio.projects.traffic.impact.2': 'Increased troubleshooting efficiency',
 };
