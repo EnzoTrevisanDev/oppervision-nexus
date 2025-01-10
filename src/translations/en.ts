@@ -1,7 +1,14 @@
 export const enTranslations = {
   'meta.title': 'Oppervision - IT Infrastructure & Automation Solutions',
   'meta.description': 'Expert IT consulting, infrastructure automation, and monitoring solutions for businesses of all sizes.',
-  
+
+  //Home page
+  'home.hero.title': 'IT and Automation Consulting',
+  'home.hero.subtitle':'We simplify your infrastructure with scalable solutions and intelligent monitoring',
+  'home.cta.meeting':'Schedule a free meeting',
+  'home.cta.portfolio':'Explore our portfolio',
+
+
   // Navigation
   'nav.about': 'About',
   'nav.services': 'Services',
