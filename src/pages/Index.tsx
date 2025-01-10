@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { Server, Cloud, ChartBar, Briefcase } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import TestimonialCard from "../components/TestimonialCard";
-import PricingSection from "../components/PricingSection";
 import ContactForm from "../components/ContactForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
@@ -32,24 +30,6 @@ const Index = () => {
       icon: <Briefcase className="w-6 h-6" />,
       title: t('services.consulting.title'),
       description: t('services.consulting.description')
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: t('testimonials.1.name'),
-      role: t('testimonials.1.role'),
-      content: t('testimonials.1.content')
-    },
-    {
-      name: t('testimonials.2.name'),
-      role: t('testimonials.2.role'),
-      content: t('testimonials.2.content')
-    },
-    {
-      name: t('testimonials.3.name'),
-      role: t('testimonials.3.role'),
-      content: t('testimonials.3.content')
     }
   ];
 
@@ -109,21 +89,6 @@ const Index = () => {
                 </div>
                 <p className="text-gray-600">{service.description}</p>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <PricingSection />
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">{t('testimonials.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
             ))}
           </div>
         </div>
