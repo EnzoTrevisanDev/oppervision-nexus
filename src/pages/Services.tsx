@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Monitor, Cloud, Container, Briefcase, CheckCircle2 } from "lucide-react";
+import { Activity, Terminal, Network, Briefcase, BarChart3, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -12,28 +12,34 @@ const Services = () => {
 
   const services = [
     {
-      icon: <Monitor className="w-8 h-8" />,
+      icon: <Activity className="w-8 h-8" />,
       titleKey: 'services.monitoring.title',
       descriptionKey: 'services.monitoring.description',
       benefitsKey: 'services.monitoring.benefits'
     },
     {
-      icon: <Container className="w-8 h-8" />,
-      titleKey: 'services.kubernetes.title',
-      descriptionKey: 'services.kubernetes.description',
-      benefitsKey: 'services.kubernetes.benefits'
+      icon: <Terminal className="w-8 h-8" />,
+      titleKey: 'services.automation.title',
+      descriptionKey: 'services.automation.description',
+      benefitsKey: 'services.automation.benefits'
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      titleKey: 'services.cloud.title',
-      descriptionKey: 'services.cloud.description',
-      benefitsKey: 'services.cloud.benefits'
+      icon: <Network className="w-8 h-8" />,
+      titleKey: 'services.infrastructure.title',
+      descriptionKey: 'services.infrastructure.description',
+      benefitsKey: 'services.infrastructure.benefits'
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
-      titleKey: 'services.consulting.title',
-      descriptionKey: 'services.consulting.description',
-      benefitsKey: 'services.consulting.benefits'
+      titleKey: 'services.projects.title',
+      descriptionKey: 'services.projects.description',
+      benefitsKey: 'services.projects.benefits'
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      titleKey: 'services.dashboards.title',
+      descriptionKey: 'services.dashboards.description',
+      benefitsKey: 'services.dashboards.benefits'
     }
   ];
 
@@ -53,7 +59,7 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {services.map((service, index) => (
               <motion.div
                 key={index}
