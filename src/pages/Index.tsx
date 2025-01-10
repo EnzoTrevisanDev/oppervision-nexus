@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Cloud, ChartBar, Briefcase } from "lucide-react";
+import { Server, FileCode, Network, Briefcase, BarChart } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
@@ -17,19 +17,24 @@ const Index = () => {
       description: t('services.monitoring.description')
     },
     {
-      icon: <Cloud className="w-6 h-6" />,
-      title: t('services.kubernetes.title'),
-      description: t('services.kubernetes.description')
+      icon: <FileCode className="w-6 h-6" />,
+      title: t('services.automation.title'),
+      description: t('services.automation.description')
     },
     {
-      icon: <ChartBar className="w-6 h-6" />,
-      title: t('services.cloud.title'),
-      description: t('services.cloud.description')
+      icon: <Network className="w-6 h-6" />,
+      title: t('services.infrastructure.title'),
+      description: t('services.infrastructure.description')
     },
     {
       icon: <Briefcase className="w-6 h-6" />,
-      title: t('services.consulting.title'),
-      description: t('services.consulting.description')
+      title: t('services.projects.title'),
+      description: t('services.projects.description')
+    },
+    {
+      icon: <BarChart className="w-6 h-6" />,
+      title: t('services.dashboards.title'),
+      description: t('services.dashboards.description')
     }
   ];
 
@@ -72,7 +77,7 @@ const Index = () => {
       <section id="services" className="py-20 bg-secondary">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">{t('services.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
