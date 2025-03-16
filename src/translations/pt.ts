@@ -77,13 +77,12 @@ export const ptTranslations = {
   // Contact
   'contact.title': 'Entre em Contato',
   'contact.subtitle': 'Pronto para transformar sua TI? Fale conosco.',
+  'contact.form.title': 'Envie-nos uma mensagem',
   'contact.info.title': 'Informações de Contato',
   'contact.info.email.label': 'Email',
-  'contact.info.email.value': 'contato@oppervision.com',
+  'contact.info.email.value': 'enzo.trevisan@oppervision.com',
   'contact.info.phone.label': 'Telefone',
-  'contact.info.phone.value': '+55 (11) 99999-9999',
-  'contact.info.address.label': 'Endereço',
-  'contact.info.address.value': 'Rua da Tecnologia, 123 - São Paulo, SP',
+  'contact.info.phone.value': '+55 (19) 971018277',
   'contact.social.title': 'Siga-nos',
   'contact.social.linkedin': 'Perfil do LinkedIn',
   'contact.social.instagram': 'Perfil do Instagram',
@@ -99,8 +98,7 @@ export const ptTranslations = {
 
   // Portfolio
   'portfolio.title': 'Meu Portfólio',
-  'portfolio.subtitle': 'Confira alguns dos meus projetos pessoais e seus impactos',
-  'portfolio.impact': 'Impacto',
+  'portfolio.subtitle': 'Confira alguns dos meus projetos pessoais',
   'portfolio.status': 'Status',
   'portfolio.repository': 'Repositório',
   'portfolio.inDevelopment': 'Em Desenvolvimento',
@@ -112,21 +110,12 @@ export const ptTranslations = {
 
   'portfolio.projects.email.title': 'Automação de Envio de E-mails',
   'portfolio.projects.email.description': 'Automação completa para envio de e-mails personalizados com integração a múltiplos serviços de SMTP.',
-  'portfolio.projects.email.impact.1': 'Redução de 50% no tempo gasto em envio manual de e-mails',
-  'portfolio.projects.email.impact.2': 'Maior precisão e consistência no contato com clientes',
-
   'portfolio.projects.kubernetes.title': 'Monitoramento de APIs em Kubernetes',
   'portfolio.projects.kubernetes.description': 'Monitoramento de APIs utilizando Kubernetes com alertas automáticos e integração com ferramentas como Prometheus e Grafana.',
-  'portfolio.projects.kubernetes.impact.1': '30% de aumento na eficiência da resposta a problemas em produção',
-  'portfolio.projects.kubernetes.impact.2': 'Maior escalabilidade para sistemas críticos',
 
   'portfolio.projects.reports.title': 'Geração de Relatórios Automatizados',
   'portfolio.projects.reports.description': 'API para criação e envio de relatórios customizados de forma automatizada.',
-  'portfolio.projects.reports.impact.1': 'Economia de tempo para equipes administrativas',
-  'portfolio.projects.reports.impact.2': 'Redução de 20% nos custos de geração de relatórios',
 
   'portfolio.projects.traffic.title': 'Dashboard de Tráfego de Rede em Tempo Real',
   'portfolio.projects.traffic.description': 'Aplicação em Python e Streamlit para monitoramento em tempo real de tráfego de rede, incluindo visualizações dinâmicas e métricas detalhadas.',
-  'portfolio.projects.traffic.impact.1': 'Detecção rápida de gargalos na rede',
-  'portfolio.projects.traffic.impact.2': 'Aumento na eficiência de troubleshooting',
 };

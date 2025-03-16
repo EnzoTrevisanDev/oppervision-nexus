@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-center mt-6 text-sm text-gray-400">
-          © 2024 Oppervision. Todos os direitos reservados.
+          © 2025 Oppervision. Todos os direitos reservados.
         </p>
       </div>
     </footer>

@@ -77,13 +77,12 @@ export const enTranslations = {
   // Contact
   'contact.title': 'Contact Us',
   'contact.subtitle': 'Ready to transform your IT? Get in touch with us.',
+  'contact.form.title': 'Send us a message',
   'contact.info.title': 'Contact Information',
   'contact.info.email.label': 'Email',
-  'contact.info.email.value': 'contact@oppervision.com',
+  'contact.info.email.value': 'enzo.trevisan@oppervision.com',
   'contact.info.phone.label': 'Phone',
-  'contact.info.phone.value': '+1 (555) 123-4567',
-  'contact.info.address.label': 'Address',
-  'contact.info.address.value': '123 Tech Street, Silicon Valley, CA',
+  'contact.info.phone.value': '+55 (19) 971018277',
   'contact.social.title': 'Follow Us',
   'contact.social.linkedin': 'LinkedIn Profile',
   'contact.social.instagram': 'Instagram Profile',
@@ -99,8 +98,7 @@ export const enTranslations = {
 
   // Portfolio
   'portfolio.title': 'My Portfolio',
-  'portfolio.subtitle': 'Check out some of my personal projects and their impact',
-  'portfolio.impact': 'Impact',
+  'portfolio.subtitle': 'Check out some of my personal projects',
   'portfolio.status': 'Status',
   'portfolio.repository': 'Repository',
   'portfolio.inDevelopment': 'In Development',
@@ -112,21 +110,13 @@ export const enTranslations = {
 
   'portfolio.projects.email.title': 'Email Sending Automation',
   'portfolio.projects.email.description': 'Complete automation for sending personalized emails with integration with multiple SMTP services.',
-  'portfolio.projects.email.impact.1': '50% reduction in time spent manually sending emails',
-  'portfolio.projects.email.impact.2': 'Greater accuracy and consistency in contact with customers',
 
   'portfolio.projects.kubernetes.title': 'API Monitoring in Kubernetes',
   'portfolio.projects.kubernetes.description': 'API monitoring using Kubernetes with automatic alerts and integration with tools such as Prometheus and Grafana.',
-  'portfolio.projects.kubernetes.impact.1': '30% increase in efficiency in responding to problems in production',
-  'portfolio.projects.kubernetes.impact.2': 'Greater scalability for critical systems',
 
   'portfolio.projects.reports.title': 'Automated Report Generation',
   'portfolio.projects.reports.description': 'API for creating and sending customized reports in an automated way.',
-  'portfolio.projects.reports.impact.1': 'Time savings for administrative teams',
-  'portfolio.projects.reports.impact.2': '20% reduction in reporting costs',
 
   'portfolio.projects.traffic.title': 'Real-Time Network Traffic Dashboard',
   'portfolio.projects.traffic.description': 'Python and Streamlit application for real-time monitoring of network traffic, including dynamic visualizations and detailed metrics.',
-  'portfolio.projects.traffic.impact.1': 'Rapid detection of network bottlenecks',
-  'portfolio.projects.traffic.impact.2': 'Increased troubleshooting efficiency',
 };

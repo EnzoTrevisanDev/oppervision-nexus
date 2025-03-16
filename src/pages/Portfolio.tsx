@@ -2,8 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Mail, Activity, FileText, BarChart2, Github, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail, Activity, FileText, BarChart2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const Portfolio = () => {
@@ -15,43 +14,24 @@ const Portfolio = () => {
       icon: <Mail className="w-6 h-6" />,
       titleKey: 'portfolio.projects.email.title',
       descriptionKey: 'portfolio.projects.email.description',
-      impacts: [
-        'portfolio.projects.email.impact.1',
-        'portfolio.projects.email.impact.2'
-      ],
-      github: "https://github.com/yourusername/email-automation"
     },
     {
       category: t('portfolio.categories.monitoring'),
       icon: <Activity className="w-6 h-6" />,
       titleKey: 'portfolio.projects.kubernetes.title',
       descriptionKey: 'portfolio.projects.kubernetes.description',
-      impacts: [
-        'portfolio.projects.kubernetes.impact.1',
-        'portfolio.projects.kubernetes.impact.2'
-      ],
-      github: "https://github.com/yourusername/kubernetes-monitoring"
     },
     {
       category: t('portfolio.categories.reporting'),
       icon: <FileText className="w-6 h-6" />,
       titleKey: 'portfolio.projects.reports.title',
       descriptionKey: 'portfolio.projects.reports.description',
-      impacts: [
-        'portfolio.projects.reports.impact.1',
-        'portfolio.projects.reports.impact.2'
-      ],
-      github: "https://github.com/yourusername/automated-reports"
     },
     {
       category: t('portfolio.categories.dashboard'),
       icon: <BarChart2 className="w-6 h-6" />,
       titleKey: 'portfolio.projects.traffic.title',
       descriptionKey: 'portfolio.projects.traffic.description',
-      impacts: [
-        'portfolio.projects.traffic.impact.1',
-        'portfolio.projects.traffic.impact.2'
-      ],
       inDevelopment: true
     }
   ];
@@ -103,34 +83,6 @@ const Portfolio = () => {
                   <p className="text-gray-600 mb-4">
                     {t(project.descriptionKey)}
                   </p>
-
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-medium text-primary mb-2">{t('portfolio.impact')}:</h4>
-                      <ul className="space-y-2">
-                        {project.impacts.map((impact, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-gray-600">
-                            <span className="text-green-500 mt-1">✔</span>
-                            {t(impact)}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {project.github && (
-                      <div className="pt-4 border-t">
-                        <Button
-                          variant="outline"
-                          className="w-full"
-                          onClick={() => window.open(project.github, '_blank')}
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          {t('portfolio.repository')}
-                          <ExternalLink className="w-4 h-4 ml-2" />
-                        </Button>
-                      </div>
-                    )}
-                  </div>
                 </div>
               </motion.div>
             ))}

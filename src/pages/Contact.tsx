@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Instagram, Github } from "lucide-react";
+import { Mail, Phone, Linkedin, Instagram, Github } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ContactForm from "@/components/ContactForm";
 
@@ -13,36 +13,30 @@ const Contact = () => {
       icon: <Mail className="w-5 h-5" />,
       labelKey: 'contact.info.email.label',
       valueKey: 'contact.info.email.value',
-      href: "mailto:contato@oppervision.com"
+      href: "mailto:enzo.trevisan@oppervision.com"
     },
     {
       icon: <Phone className="w-5 h-5" />,
       labelKey: 'contact.info.phone.label',
       valueKey: 'contact.info.phone.value',
-      href: "tel:+15551234567"
-    },
-    {
-      icon: <MapPin className="w-5 h-5" />,
-      labelKey: 'contact.info.address.label',
-      valueKey: 'contact.info.address.value',
-      href: "#"
+      href: "tel:+151971018277"
     }
   ];
 
   const socialLinks = [
     {
       icon: <Linkedin className="w-6 h-6" />,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/oppervision-consulting-50748b337/",
       labelKey: "contact.social.linkedin"
     },
     {
       icon: <Instagram className="w-6 h-6" />,
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/oppervision/",
       labelKey: "contact.social.instagram"
     },
     {
       icon: <Github className="w-6 h-6" />,
-      href: "https://github.com",
+      href: "https://github.com/Oppervision",
       labelKey: "contact.social.github"
     }
   ];
