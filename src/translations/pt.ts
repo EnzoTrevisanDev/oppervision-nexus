@@ -5,7 +5,7 @@ export const ptTranslations = {
   //Home page
   'home.hero.title': 'Consultoria em TI e Automação',
   'home.hero.subtitle':'Simplificamos sua infraestrutura com soluções escaláveis e monitoramento inteligente',
-  'home.cta.meeting':'Agende uma reunião gratuita',
+  'home.cta.linkedin':'Envie mensagem no LinkedIn',
   'home.cta.portfolio':'Explore nosso portfólio',
 
   // Navigation
@@ -13,7 +13,25 @@ export const ptTranslations = {
   'nav.services': 'Serviços',
   'nav.contact': 'Contato',
   'nav.portfolio': 'Portfólio',
+  'nav.blog': 'Blog',
   
+  // Blog
+  'blog.title': 'Blog',
+  'blog.subtitle': 'Insights, dicas e melhores práticas em infraestrutura de TI e automação',
+  'blog.readMore': 'Leia Mais',
+  'blog.backToBlog': 'Voltar ao Blog',
+  'blog.meta.title': 'Blog - Insights em Infraestrutura de TI e Automação',
+  'blog.meta.description': 'Mantenha-se atualizado com as últimas tendências, dicas e melhores práticas em infraestrutura de TI, monitoramento e automação.',
+
+  'blog.posts.monitoring.title': 'Melhores Práticas em Automação de Monitoramento',
+  'blog.posts.monitoring.description': 'Aprenda como implementar automação de monitoramento eficaz para sua infraestrutura usando ferramentas como Zabbix e Prometheus.',
+
+  'blog.posts.kubernetes.title': 'Guia de Monitoramento Kubernetes',
+  'blog.posts.kubernetes.description': 'Guia completo para monitorar seus clusters Kubernetes com Prometheus, Grafana e dashboards personalizados.',
+
+  'blog.posts.infrastructure.title': 'Dicas para Escalonamento de Infraestrutura',
+  'blog.posts.infrastructure.description': 'Dicas essenciais para escalonar sua infraestrutura de TI de forma eficiente mantendo performance e segurança.',
+
   // About Page
   'about.title': 'Sobre Nós',
   'about.description': 'A Oppervision é uma empresa de consultoria especializada em tecnologia da informação e automação, dedicada a oferecer soluções inteligentes e escaláveis para empresas de todos os portes.',

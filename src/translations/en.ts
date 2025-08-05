@@ -5,7 +5,7 @@ export const enTranslations = {
   //Home page
   'home.hero.title': 'IT and Automation Consulting',
   'home.hero.subtitle':'We simplify your infrastructure with scalable solutions and intelligent monitoring',
-  'home.cta.meeting':'Schedule a free meeting',
+  'home.cta.linkedin':'Message us on LinkedIn',
   'home.cta.portfolio':'Explore our portfolio',
 
   // Navigation
@@ -13,6 +13,24 @@ export const enTranslations = {
   'nav.services': 'Services',
   'nav.contact': 'Contact',
   'nav.portfolio': 'Portfolio',
+  'nav.blog': 'Blog',
+  
+  // Blog
+  'blog.title': 'Blog',
+  'blog.subtitle': 'Insights, tips, and best practices in IT infrastructure and automation',
+  'blog.readMore': 'Read More',
+  'blog.backToBlog': 'Back to Blog',
+  'blog.meta.title': 'Blog - IT Infrastructure & Automation Insights',
+  'blog.meta.description': 'Stay updated with the latest trends, tips, and best practices in IT infrastructure, monitoring, and automation.',
+
+  'blog.posts.monitoring.title': 'Monitoring Automation Best Practices',
+  'blog.posts.monitoring.description': 'Learn how to implement effective monitoring automation for your infrastructure using tools like Zabbix and Prometheus.',
+
+  'blog.posts.kubernetes.title': 'Kubernetes Monitoring Guide',
+  'blog.posts.kubernetes.description': 'Complete guide to monitoring your Kubernetes clusters with Prometheus, Grafana, and custom dashboards.',
+
+  'blog.posts.infrastructure.title': 'Scaling Infrastructure Tips',
+  'blog.posts.infrastructure.description': 'Essential tips for scaling your IT infrastructure efficiently while maintaining performance and security.',
   
   // About Page
   'about.title': 'About Us',

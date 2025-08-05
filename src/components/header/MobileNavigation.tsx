@@ -1,3 +1,4 @@
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import NavigationLink from "./NavigationLink";
 
@@ -19,6 +20,9 @@ const MobileNavigation = ({ isOpen, onLinkClick }: MobileNavigationProps) => {
         </NavigationLink>
         <NavigationLink to="/services" onClick={onLinkClick}>
           {t('nav.services')}
+        </NavigationLink>
+        <NavigationLink to="/blog" onClick={onLinkClick}>
+          {t('nav.blog')}
         </NavigationLink>
         <NavigationLink to="/contact" onClick={onLinkClick}>
           {t('nav.contact')}

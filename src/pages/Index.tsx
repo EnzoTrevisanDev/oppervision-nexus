@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Server, FileCode, Network, Briefcase, BarChart } from "lucide-react";
 import Header from "../components/Header";
@@ -38,6 +39,10 @@ const Index = () => {
     }
   ];
 
+  const handleLinkedInMessage = () => {
+    window.open('https://www.linkedin.com/messaging/compose/?recipient=oppervision-consulting-50748b337', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-secondary">
       <Header />
@@ -58,11 +63,9 @@ const Index = () => {
               {t('home.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button className="bg-accent hover:bg-accent/90">
-                  {t('home.cta.meeting')}
-                </Button>
-              </Link>
+              <Button onClick={handleLinkedInMessage} className="bg-accent hover:bg-accent/90">
+                {t('home.cta.linkedin')}
+              </Button>
               <Link to="/portfolio">
                 <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
                   {t('home.cta.portfolio')}
