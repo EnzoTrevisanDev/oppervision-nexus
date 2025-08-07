@@ -137,4 +137,22 @@ export const enTranslations = {
 
   'portfolio.projects.traffic.title': 'Real-Time Network Traffic Dashboard',
   'portfolio.projects.traffic.description': 'Python and Streamlit application for real-time monitoring of network traffic, including dynamic visualizations and detailed metrics.',
+
+  'portfolio.projects.infrastructure.title': 'Infrastructure Automation Platform',
+  'portfolio.projects.infrastructure.description': 'Complete infrastructure automation using Terraform, Ansible, and cloud services for scalable deployment and management.',
+
+  'portfolio.projects.database.title': 'Database Performance Monitor',
+  'portfolio.projects.database.description': 'Advanced database monitoring solution with real-time performance metrics, query optimization, and automated alerts.',
+
+  'portfolio.projects.security.title': 'Security Compliance Automation',
+  'portfolio.projects.security.description': 'Automated security scanning and compliance reporting system with vulnerability assessment and remediation workflows.',
+
+  'portfolio.projects.api.title': 'API Gateway & Management',
+  'portfolio.projects.api.description': 'High-performance API gateway with rate limiting, authentication, monitoring, and comprehensive management features.',
+
+  'portfolio.projects.cloud.title': 'Cloud Migration Suite',
+  'portfolio.projects.cloud.description': 'Complete cloud migration platform with assessment tools, automated migration workflows, and post-migration optimization.',
+
+  'portfolio.projects.logs.title': 'Log Analytics Platform',
+  'portfolio.projects.logs.description': 'Centralized log management and analytics platform with real-time processing, search capabilities, and intelligent alerting.',
 };
