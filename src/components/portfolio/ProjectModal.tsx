@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 interface Project {
   id: string;
   category: string;
-  icon: React.ReactNode;
+  icon: React.ComponentType<{ className?: string }>;
   titleKey: string;
   descriptionKey: string;
   image: string;
@@ -45,6 +45,8 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
 
   if (!project || !isOpen) return null;
 
+  const IconComponent = project.icon;
+
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
       <motion.div
@@ -57,7 +59,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
         <div className="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <div className="p-2 bg-accent/10 rounded-lg text-accent">
-              {project.icon}
+              <IconComponent className="w-6 h-6" />
             </div>
             <div>
               <h2 className="text-2xl font-bold text-primary">{t(project.titleKey)}</h2>

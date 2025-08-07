@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     id: 'email-automation',
     category: 'Automation',
-    icon: <Mail className="w-6 h-6" />,
+    icon: Mail,
     titleKey: 'portfolio.projects.email.title',
     descriptionKey: 'portfolio.projects.email.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   {
     id: 'kubernetes-monitoring',
     category: 'Monitoring',
-    icon: <Activity className="w-6 h-6" />,
+    icon: Activity,
     titleKey: 'portfolio.projects.kubernetes.title',
     descriptionKey: 'portfolio.projects.kubernetes.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
   {
     id: 'report-generation',
     category: 'Reporting',
-    icon: <FileText className="w-6 h-6" />,
+    icon: FileText,
     titleKey: 'portfolio.projects.reports.title',
     descriptionKey: 'portfolio.projects.reports.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -177,7 +177,7 @@ export const projects: Project[] = [
   {
     id: 'traffic-dashboard',
     category: 'Dashboard',
-    icon: <BarChart2 className="w-6 h-6" />,
+    icon: BarChart2,
     titleKey: 'portfolio.projects.traffic.title',
     descriptionKey: 'portfolio.projects.traffic.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
   {
     id: 'infrastructure-automation',
     category: 'Automation',
-    icon: <Server className="w-6 h-6" />,
+    icon: Server,
     titleKey: 'portfolio.projects.infrastructure.title',
     descriptionKey: 'portfolio.projects.infrastructure.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -238,7 +238,7 @@ export const projects: Project[] = [
   {
     id: 'database-monitoring',
     category: 'Monitoring',
-    icon: <Database className="w-6 h-6" />,
+    icon: Database,
     titleKey: 'portfolio.projects.database.title',
     descriptionKey: 'portfolio.projects.database.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -263,7 +263,7 @@ export const projects: Project[] = [
   {
     id: 'security-automation',
     category: 'Security',
-    icon: <Shield className="w-6 h-6" />,
+    icon: Shield,
     titleKey: 'portfolio.projects.security.title',
     descriptionKey: 'portfolio.projects.security.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -283,7 +283,7 @@ export const projects: Project[] = [
   {
     id: 'api-gateway',
     category: 'Infrastructure',
-    icon: <Code className="w-6 h-6" />,
+    icon: Code,
     titleKey: 'portfolio.projects.api.title',
     descriptionKey: 'portfolio.projects.api.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -308,7 +308,7 @@ export const projects: Project[] = [
   {
     id: 'cloud-migration',
     category: 'Cloud',
-    icon: <Cloud className="w-6 h-6" />,
+    icon: Cloud,
     titleKey: 'portfolio.projects.cloud.title',
     descriptionKey: 'portfolio.projects.cloud.description',
     image: "/placeholder.svg?height=200&width=300",
@@ -339,7 +339,7 @@ export const projects: Project[] = [
   {
     id: 'log-analytics',
     category: 'Analytics',
-    icon: <Monitor className="w-6 h-6" />,
+    icon: Monitor,
     titleKey: 'portfolio.projects.logs.title',
     descriptionKey: 'portfolio.projects.logs.description',
     image: "/placeholder.svg?height=200&width=300",

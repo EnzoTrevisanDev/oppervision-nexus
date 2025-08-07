@@ -15,7 +15,7 @@ interface Technology {
 interface Project {
   id: string;
   category: string;
-  icon: React.ReactNode;
+  icon: React.ComponentType<{ className?: string }>;
   titleKey: string;
   descriptionKey: string;
   image: string;
@@ -59,6 +59,8 @@ const ProjectCard = ({ project, index, onCaseStudyClick }: ProjectCardProps) => 
       }
     }
   };
+
+  const IconComponent = project.icon;
 
   return (
     <motion.div
@@ -116,7 +118,7 @@ const ProjectCard = ({ project, index, onCaseStudyClick }: ProjectCardProps) => 
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-accent/10 rounded-lg text-accent transition-colors group-hover:bg-accent group-hover:text-white">
-              {project.icon}
+              <IconComponent className="w-6 h-6" />
             </div>
             <Badge variant="outline">{project.category}</Badge>
           </div>
