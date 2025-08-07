@@ -10,7 +10,7 @@ export interface Technology {
 export interface Project {
   id: string;
   category: string;
-  icon: React.ReactNode;
+  icon: React.ComponentType<{ className?: string }>;
   titleKey: string;
   descriptionKey: string;
   image: string;
