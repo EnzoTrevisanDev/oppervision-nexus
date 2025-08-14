@@ -6,10 +6,18 @@ import Header from "@/components/Header";
 import SEO from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ProjectCard from "@/components/portfolio/ProjectCard";
+import EnhancedProjectCard from "@/components/portfolio/EnhancedProjectCard";
 import PortfolioFilters from "@/components/portfolio/PortfolioFilters";
 import ProjectModal from "@/components/portfolio/ProjectModal";
+import PortfolioHero from "@/components/portfolio/PortfolioHero";
+import TechnologyCloud from "@/components/portfolio/TechnologyCloud";
+import ProcessShowcase from "@/components/portfolio/ProcessShowcase";
+import ClientTestimonials from "@/components/portfolio/ClientTestimonials";
+import TechnologyMatcher from "@/components/portfolio/TechnologyMatcher";
+import TimelineView from "@/components/portfolio/TimelineView";
 import { projects, Project } from "@/data/projects";
 import { Button } from "@/components/ui/button";
+import { Grid, Clock, Zap } from "lucide-react";
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -19,6 +27,9 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [viewMode, setViewMode] = useState<'grid' | 'timeline'>('grid');
+  const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>([]);
+  const [showTechMatcher, setShowTechMatcher] = useState(false);
   const projectsPerPage = 6;
 
   // Get unique categories
@@ -34,6 +45,15 @@ const Portfolio = () => {
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(project => project.category === selectedCategory);
+    }
+
+    // Filter by selected technologies
+    if (selectedTechnologies.length > 0) {
+      filtered = filtered.filter(project =>
+        project.technologies.some(tech =>
+          selectedTechnologies.includes(tech.name)
+        )
+      );
     }
 
     // Filter by search query
@@ -60,18 +80,28 @@ const Portfolio = () => {
     });
 
     return filtered;
-  }, [selectedCategory, searchQuery, sortBy, t]);
+  }, [selectedCategory, selectedTechnologies, searchQuery, sortBy, t]);
 
   // Pagination
   const totalPages = Math.ceil(filteredAndSortedProjects.length / projectsPerPage);
-  const currentProjects = filteredAndSortedProjects.slice(
-    (currentPage - 1) * projectsPerPage,
-    currentPage * projectsPerPage
-  );
+  const currentProjects = viewMode === 'timeline' 
+    ? filteredAndSortedProjects 
+    : filteredAndSortedProjects.slice(
+        (currentPage - 1) * projectsPerPage,
+        currentPage * projectsPerPage
+      );
 
   const handleCaseStudyClick = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
+  };
+
+  const handleTechnologyClick = (technology: string) => {
+    setSelectedTechnologies(prev => 
+      prev.includes(technology)
+        ? prev.filter(t => t !== technology)
+        : [...prev, technology]
+    );
   };
 
   const containerVariants = {
@@ -121,21 +151,62 @@ const Portfolio = () => {
 
       <div className="min-h-screen bg-secondary">
         <Header />
-        <main className="pt-20 pb-16">
+        
+        {/* Hero Section */}
+        <PortfolioHero />
+        
+        <main className="pb-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center mb-16"
-            >
-              <h1 className="text-4xl font-bold text-primary mb-4">{t('portfolio.title')}</h1>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                {t('portfolio.subtitle')}
-              </p>
-              <div className="flex justify-center text-sm text-gray-500">
-                <span>{filteredAndSortedProjects.length} projects found</span>
+            
+            {/* Client Testimonials */}
+            <ClientTestimonials />
+            
+            {/* Process Showcase */}
+            <ProcessShowcase />
+            
+            {/* Technology Cloud */}
+            <TechnologyCloud 
+              onTechnologyClick={handleTechnologyClick}
+              selectedTechnologies={selectedTechnologies}
+            />
+
+            {/* Technology Matcher Toggle */}
+            <div className="text-center mb-8">
+              <Button
+                onClick={() => setShowTechMatcher(!showTechMatcher)}
+                className="mb-4"
+              >
+                <Zap className="w-4 h-4 mr-2" />
+                {showTechMatcher ? 'Hide' : 'Find'} Your Perfect Service Match
+              </Button>
+            </div>
+
+            {/* Technology Matcher */}
+            {showTechMatcher && (
+              <div className="mb-12">
+                <TechnologyMatcher />
               </div>
-            </motion.div>
+            )}
+
+            {/* View Mode Toggle */}
+            <div className="flex justify-center gap-2 mb-8">
+              <Button
+                variant={viewMode === 'grid' ? 'default' : 'outline'}
+                onClick={() => setViewMode('grid')}
+                size="sm"
+              >
+                <Grid className="w-4 h-4 mr-2" />
+                Grid View
+              </Button>
+              <Button
+                variant={viewMode === 'timeline' ? 'default' : 'outline'}
+                onClick={() => setViewMode('timeline')}
+                size="sm"
+              >
+                <Clock className="w-4 h-4 mr-2" />
+                Timeline View
+              </Button>
+            </div>
 
             {/* Filters */}
             <PortfolioFilters
@@ -148,37 +219,45 @@ const Portfolio = () => {
               onSortChange={setSortBy}
             />
 
-            {/* Projects Grid */}
+            {/* Projects Display */}
             {currentProjects.length > 0 ? (
-              <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
-              >
-                {currentProjects.map((project, index) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    index={index}
-                    onCaseStudyClick={handleCaseStudyClick}
-                  />
-                ))}
-              </motion.div>
+              viewMode === 'timeline' ? (
+                <TimelineView
+                  projects={currentProjects}
+                  onCaseStudyClick={handleCaseStudyClick}
+                />
+              ) : (
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
+                >
+                  {currentProjects.map((project, index) => (
+                    <EnhancedProjectCard
+                      key={project.id}
+                      project={project}
+                      index={index}
+                      onCaseStudyClick={handleCaseStudyClick}
+                    />
+                  ))}
+                </motion.div>
+              )
             ) : (
               <div className="text-center py-16">
                 <p className="text-gray-500 text-lg mb-4">No projects found matching your criteria.</p>
                 <Button onClick={() => {
                   setSelectedCategory('all');
                   setSearchQuery('');
+                  setSelectedTechnologies([]);
                 }}>
                   Reset Filters
                 </Button>
               </div>
             )}
 
-            {/* Pagination */}
-            {totalPages > 1 && (
+            {/* Pagination - only show for grid view */}
+            {viewMode === 'grid' && totalPages > 1 && (
               <div className="flex justify-center gap-2">
                 <Button
                   variant="outline"
