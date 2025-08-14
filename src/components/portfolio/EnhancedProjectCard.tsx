@@ -1,9 +1,8 @@
-
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Github, ExternalLink, Calendar, Users, Share2, Download, Play } from "lucide-react";
+import { Calendar, Users, Play } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 
@@ -64,26 +63,6 @@ const EnhancedProjectCard = ({ project, index, onCaseStudyClick }: EnhancedProje
   };
 
   const IconComponent = project.icon;
-
-  const handleShare = (platform: string) => {
-    const url = window.location.href;
-    const title = t(project.titleKey);
-    const text = t(project.descriptionKey);
-    
-    switch (platform) {
-      case 'linkedin':
-        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`, '_blank');
-        break;
-      case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title} - ${text}`, '_blank');
-        break;
-    }
-  };
-
-  const handleDownloadPDF = () => {
-    // In a real implementation, this would generate/download actual PDF
-    console.log(`Downloading PDF for project: ${project.id}`);
-  };
 
   return (
     <motion.div
@@ -216,74 +195,25 @@ const EnhancedProjectCard = ({ project, index, onCaseStudyClick }: EnhancedProje
             ))}
           </div>
 
-          {/* Enhanced action buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ 
-              opacity: isHovered ? 1 : 0, 
-              y: isHovered ? 0 : 20 
-            }}
-            className="border-t pt-4"
-          >
-            <div className="flex justify-between items-center gap-2 mb-3">
-              <div className="flex gap-2">
-                {project.github && (
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-3 h-3 mr-1" />
-                      Code
-                    </a>
-                  </Button>
-                )}
-                {project.demo && (
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Demo
-                    </a>
-                  </Button>
-                )}
-              </div>
-              {project.caseStudy && (
-                <Button 
-                  size="sm" 
-                  onClick={() => onCaseStudyClick?.(project)}
-                >
-                  Case Study
-                </Button>
-              )}
-            </div>
-
-            {/* Social sharing and download */}
-            <div className="flex justify-between items-center">
-              <div className="flex gap-1">
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
-                  onClick={() => handleShare('linkedin')}
-                  className="p-2"
-                >
-                  <Share2 className="w-3 h-3" />
-                </Button>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
-                  onClick={() => handleShare('twitter')}
-                  className="p-2"
-                >
-                  <Share2 className="w-3 h-3" />
-                </Button>
-              </div>
+          {/* Case Study button (only if available) */}
+          {project.caseStudy && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: isHovered ? 1 : 0, 
+                y: isHovered ? 0 : 20 
+              }}
+              className="border-t pt-4"
+            >
               <Button 
                 size="sm" 
-                variant="ghost" 
-                onClick={handleDownloadPDF}
-                className="p-2"
+                onClick={() => onCaseStudyClick?.(project)}
+                className="w-full"
               >
-                <Download className="w-3 h-3" />
+                View Case Study
               </Button>
-            </div>
-          </motion.div>
+            </motion.div>
+          )}
         </div>
       </motion.div>
     </motion.div>
