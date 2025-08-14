@@ -1,4 +1,3 @@
-
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
@@ -12,7 +11,6 @@ import ProjectModal from "@/components/portfolio/ProjectModal";
 import PortfolioHero from "@/components/portfolio/PortfolioHero";
 import TechnologyCloud from "@/components/portfolio/TechnologyCloud";
 import ProcessShowcase from "@/components/portfolio/ProcessShowcase";
-import ClientTestimonials from "@/components/portfolio/ClientTestimonials";
 import TechnologyMatcher from "@/components/portfolio/TechnologyMatcher";
 import TimelineView from "@/components/portfolio/TimelineView";
 import { projects, Project } from "@/data/projects";
@@ -157,9 +155,6 @@ const Portfolio = () => {
         
         <main className="pb-16">
           <div className="container mx-auto px-4">
-            
-            {/* Client Testimonials */}
-            <ClientTestimonials />
             
             {/* Process Showcase */}
             <ProcessShowcase />
