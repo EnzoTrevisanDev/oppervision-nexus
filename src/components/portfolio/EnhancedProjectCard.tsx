@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Github, ExternalLink, Calendar, Users, TrendingUp, Share2, Download, Play } from "lucide-react";
+import { Github, ExternalLink, Calendar, Users, Share2, Download, Play } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 
@@ -199,31 +199,6 @@ const EnhancedProjectCard = ({ project, index, onCaseStudyClick }: EnhancedProje
               </div>
               <Progress value={project.progress} className="h-2" />
             </div>
-          )}
-
-          {/* Performance Metrics */}
-          {project.metrics && (
-            <motion.div 
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ 
-                opacity: isHovered ? 1 : 0, 
-                height: isHovered ? "auto" : 0 
-              }}
-              className="mb-4 p-3 bg-gray-50 rounded-lg overflow-hidden"
-            >
-              <div className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                <TrendingUp className="w-4 h-4 mr-1" />
-                Key Metrics
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                {project.metrics.map((metric, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="text-lg font-bold text-accent">{metric.value}</div>
-                    <div className="text-xs text-gray-600">{metric.label}</div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
           )}
 
           {/* Technologies used */}
