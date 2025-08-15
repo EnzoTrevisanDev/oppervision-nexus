@@ -26,6 +26,9 @@ jobs:
       url: https://oppervision.netlify.app
     steps:
       - uses: actions/checkout@v4
+       # install dependecies
+      - name: Install dependencies
+        run: npm install
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
       - name: deploy to DEV
