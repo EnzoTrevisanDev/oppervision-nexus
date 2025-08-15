@@ -43,15 +43,8 @@ jobs:
     needs: deploy_dev
     environment:
       name: prod
-      url: https://yoursite.netlify.app
+      url: https://www.oppervision.com.br/
     steps:
-      - name: Wait for manual approval
-        uses: fjogeleit/http-request-action@v1
-        with:
-          url: https://example.com
-        # In real scenario you can replace with `workflow_dispatch` or `environment` protection
-        # so you approve manually in GitHub UI
-
       - uses: actions/checkout@v4
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
