@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install Netlify CLI
-        run: npm intall -g netlify-cli
+        run: npm install -g netlify-cli
       - name: deploy to DEV
         run: netlify deploy --dir=dist --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --branch=dev --prodIfUnlocked
         env:
