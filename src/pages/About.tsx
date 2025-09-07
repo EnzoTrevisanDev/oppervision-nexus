@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import TechnologyShowcase from "@/components/TechnologyShowcase";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -19,6 +20,9 @@ const About = () => {
       <CoreValues />
       <CompanyStats />
       
+      {/* Technology Showcase */}
+      <TechnologyShowcase />
+      
       <section className="py-16 bg-gradient-to-r from-primary to-[#2A3444] text-white">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <motion.div
@@ -26,14 +30,17 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold mb-6">
-              {t('about.cta.text')}
+            <h3 className="text-2xl font-semibold mb-4">
+              {t('services.cta.title')}
             </h3>
+            <p className="text-lg mb-6 text-white/90">
+              {t('services.cta.diagnostic.description')}
+            </p>
             <Button
-              onClick={() => navigate("/contact")}
-              className="bg-white text-primary hover:bg-gray-100"
+              onClick={() => navigate("/diagnostic")}
+              className="bg-white text-primary hover:bg-gray-100 font-semibold"
             >
-              {t('about.cta.button')}
+              {t('services.cta.button')}
             </Button>
           </motion.div>
         </div>

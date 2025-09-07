@@ -3,13 +3,15 @@ import { motion } from "framer-motion";
 import { Server, FileCode, Network, Briefcase, BarChart } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ContactForm from "../components/ContactForm";
+import TargetAudiences from "../components/TargetAudiences";
+import TechnologyShowcase from "../components/TechnologyShowcase";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Index = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -66,11 +68,12 @@ const Index = () => {
               <Button onClick={handleLinkedInMessage} className="bg-accent hover:bg-accent/90">
                 {t('home.cta.linkedin')}
               </Button>
-              <Link to="/portfolio">
-                <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20">
-                  {t('home.cta.portfolio')}
-                </Button>
-              </Link>
+              <Button
+                onClick={() => navigate("/diagnostic")}
+                className="bg-white/10 hover:bg-white/20 text-white border border-white/20"
+              >
+                {t('services.cta.button')}
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -102,21 +105,31 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Target Audiences Section */}
+      <TargetAudiences />
+
+      {/* Technology Showcase */}
+      <TechnologyShowcase />
+
       {/* Contact Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-2xl mx-auto text-center"
+            className="text-center bg-gradient-to-br from-primary to-accent text-white p-12 rounded-2xl max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-primary mb-6">{t('contact.title')}</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              {t('contact.subtitle')}
+            <h2 className="text-3xl font-bold mb-4">{t('services.cta.title')}</h2>
+            <p className="text-xl mb-8 text-white/90">
+              {t('services.cta.diagnostic.description')}
             </p>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <ContactForm />
-            </div>
+            <Button
+              size="lg"
+              onClick={() => navigate("/diagnostic")}
+              className="bg-white text-primary hover:bg-white/90 font-semibold"
+            >
+              {t('services.cta.button')}
+            </Button>
           </motion.div>
         </div>
       </section>

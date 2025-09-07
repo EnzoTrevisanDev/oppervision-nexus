@@ -59,11 +59,27 @@ export const ptTranslations = {
   'services.title': 'Nossos Serviços',
   'services.subtitle': 'A Oppervision oferece soluções personalizadas usando tecnologias de ponta',
   
-  'services.monitoring.title': 'Automação de Monitoramento (Serviço Principal)',
-  'services.monitoring.description': 'Implementação e configuração de ferramentas como Zabbix, Prometheus e Grafana para garantir monitoramento eficiente e proativo.',
-  'services.monitoring.benefits.1': 'Identificação rápida de problemas críticos',
-  'services.monitoring.benefits.2': 'Redução no tempo de inatividade dos serviços',
-  'services.monitoring.benefits.3': 'Dashboards visuais e relatórios acionáveis para decisões estratégicas',
+  // Detailed Monitoring Services
+  'services.monitoring.title': 'Monitoramento Completo',
+  'services.monitoring.subtitle': 'Tenha visibilidade total da sua infraestrutura com monitoramento inteligente e proativo',
+  
+  'services.monitoring.apm.title': 'Monitoramento de Performance de Aplicações (APM)',
+  'services.monitoring.apm.description': 'Encontre gargalos no seu código e otimize a experiência do usuário com ferramentas avançadas de APM.',
+  'services.monitoring.apm.benefits.1': 'Identificação precisa de gargalos de performance',
+  'services.monitoring.apm.benefits.2': 'Rastreamento detalhado de transações',
+  'services.monitoring.apm.benefits.3': 'Otimização da experiência do usuário',
+
+  'services.monitoring.infrastructure.title': 'Monitoramento de Infraestrutura',
+  'services.monitoring.infrastructure.description': 'Tenha uma visão completa da saúde de seus servidores, contêineres e serviços em nuvem.',
+  'services.monitoring.infrastructure.benefits.1': 'Visibilidade completa de recursos (CPU, memória, disco)',
+  'services.monitoring.infrastructure.benefits.2': 'Monitoramento de containers e Kubernetes',
+  'services.monitoring.infrastructure.benefits.3': 'Alertas inteligentes e automáticos',
+
+  'services.monitoring.logs.title': 'Gestão Centralizada de Logs',
+  'services.monitoring.logs.description': 'Investigue problemas em segundos, não em horas, com todos os seus logs em um só lugar.',
+  'services.monitoring.logs.benefits.1': 'Centralização de logs de toda infraestrutura',
+  'services.monitoring.logs.benefits.2': 'Busca avançada e correlação de eventos',
+  'services.monitoring.logs.benefits.3': 'Análise de segurança e compliance',
 
   'services.automation.title': 'Automação de Tarefas em Servidores',
   'services.automation.description': 'Criação de scripts e soluções personalizadas para automatizar tarefas repetitivas e reduzir o esforço manual.',
@@ -71,11 +87,11 @@ export const ptTranslations = {
   'services.automation.benefits.2': 'Redução de erros humanos',
   'services.automation.benefits.3': 'Melhor gerenciamento de recursos',
 
-  'services.infrastructure.title': 'Monitoramento de Infraestrutura e Redes',
-  'services.infrastructure.description': 'Soluções de monitoramento para servidores, redes e bancos de dados, garantindo visibilidade total do desempenho e segurança.',
-  'services.infrastructure.benefits.1': 'Análise em tempo real de recursos críticos',
-  'services.infrastructure.benefits.2': 'Alertas automáticos de anomalias',
-  'services.infrastructure.benefits.3': 'Relatórios detalhados de uso e desempenho',
+  'services.infrastructure.title': 'Consultoria em Infraestrutura',
+  'services.infrastructure.description': 'Análise completa e otimização da sua infraestrutura para máxima eficiência e escalabilidade.',
+  'services.infrastructure.benefits.1': 'Análise arquitetural completa',
+  'services.infrastructure.benefits.2': 'Planos de otimização e escalabilidade',
+  'services.infrastructure.benefits.3': 'Implementação de melhores práticas',
 
   'services.projects.title': 'Projetos Sob Demanda',
   'services.projects.description': 'Desenvolvimento de soluções específicas para monitoramento e automação, com base nas necessidades únicas da sua empresa.',
@@ -89,8 +105,40 @@ export const ptTranslations = {
   'services.dashboards.benefits.2': 'Relatórios configurados para diferentes equipes',
   'services.dashboards.benefits.3': 'Melhoria na análise de tendências e planejamento',
 
-  'services.cta.title': 'Precisa de soluções personalizadas?',
-  'services.cta.button': 'Entre em Contato Agora',
+  // Target Audiences
+  'target.title': 'Soluções para seu Negócio',
+  'target.subtitle': 'Cada segmento tem desafios únicos. Veja como podemos ajudar o seu.',
+
+  'target.startup.title': 'Startups e SaaS',
+  'target.startup.description': 'Escale com confiança, evite downtime e otimize custos de nuvem',
+  'target.startup.benefits.1': 'Monitoramento desde o primeiro deploy',
+  'target.startup.benefits.2': 'Automação de CI/CD e deploys',
+  'target.startup.benefits.3': 'Otimização de custos cloud',
+  'target.startup.benefits.4': 'Alertas proativos para evitar downtime',
+
+  'target.ecommerce.title': 'E-commerce',
+  'target.ecommerce.description': 'Suporte picos de tráfego, otimize velocidade e melhore checkout',
+  'target.ecommerce.benefits.1': 'Monitoramento de performance em picos (Black Friday)',
+  'target.ecommerce.benefits.2': 'Otimização de velocidade de carregamento',
+  'target.ecommerce.benefits.3': 'Monitoramento de conversão e checkout',
+  'target.ecommerce.benefits.4': 'Análise de comportamento do usuário',
+
+  'target.enterprise.title': 'CTOs e Líderes de TI',
+  'target.enterprise.description': 'Libere sua equipe de tarefas repetitivas e tome decisões baseadas em dados',
+  'target.enterprise.benefits.1': 'Automação de processos operacionais',
+  'target.enterprise.benefits.2': 'Dashboards executivos para tomada de decisão',
+  'target.enterprise.benefits.3': 'Relatórios de compliance e governança',
+  'target.enterprise.benefits.4': 'Previsibilidade e planejamento de capacidade',
+
+  // Technologies
+  'tech.title': 'Tecnologias que Dominamos',
+  'tech.subtitle': 'Utilizamos as melhores ferramentas do mercado para entregar resultados excepcionais',
+
+  // CTA
+  'services.cta.title': 'Descubra como podemos otimizar sua infraestrutura',
+  'services.cta.button': 'Agende seu Diagnóstico de Performance',
+  'services.cta.diagnostic.title': 'Diagnóstico Gratuito de Performance',
+  'services.cta.diagnostic.description': 'Análise completa da sua infraestrutura atual com relatório detalhado e recomendações personalizadas.',
 
   // Contact
   'contact.title': 'Entre em Contato',
