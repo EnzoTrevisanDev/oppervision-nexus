@@ -157,8 +157,7 @@ export const ptTranslations = {
   'contact.form.email': 'Email',
   'contact.form.phone': 'Telefone (opcional)',
   'contact.form.message': 'Mensagem',
-  'contact.form.submit': 'Enviar Mensagem',
-  'contact.form.submitting': 'Enviando...',
+  'contact.form.submit': 'Enviar via WhatsApp',
   'contact.success.title': 'Mensagem Enviada!',
   'contact.success.description': 'Obrigado por entrar em contato! Responderemos o mais breve possível.',
 

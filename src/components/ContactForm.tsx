@@ -1,23 +1,20 @@
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { sendEmail } from "@/api/sendEmail";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { MessageCircle } from "lucide-react";
 
 interface ContactFormProps {
   className?: string;
 }
 
 const ContactForm = ({ className = "" }: ContactFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
   const { t } = useLanguage();
+  const phoneNumber = "+5519971018277";
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -27,22 +24,21 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
       message: formData.get('message') as string,
     };
 
-    try {
-      await sendEmail(data);
-      toast({
-        title: t('contact.success.title'),
-        description: t('contact.success.description'),
-      });
-      (e.target as HTMLFormElement).reset();
-    } catch (error) {
-      toast({
-        title: t('contact.error.title'),
-        description: t('contact.error.description'),
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    const whatsappMessage = `
+Olá! Gostaria de solicitar uma consultoria.
+
+*Nome:* ${data.name}
+*Email:* ${data.email}
+${data.phone ? `*Telefone:* ${data.phone}` : ''}
+*Mensagem:* ${data.message}
+
+Enviado através do site oppervision.com.br
+    `;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage.trim());
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^\d]/g, '')}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -92,10 +88,10 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
       </div>
       <Button
         type="submit"
-        disabled={isSubmitting}
-        className="w-full"
+        className="w-full bg-[#25D366] hover:bg-[#22c55e] text-white"
       >
-        {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
+        <MessageCircle className="w-4 h-4 mr-2" />
+        {t('contact.form.submit')}
       </Button>
     </form>
   );

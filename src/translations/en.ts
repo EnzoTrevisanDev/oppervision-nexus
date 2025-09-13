@@ -157,8 +157,7 @@ export const enTranslations = {
   'contact.form.email': 'Email',
   'contact.form.phone': 'Phone (optional)',
   'contact.form.message': 'Message',
-  'contact.form.submit': 'Send Message',
-  'contact.form.submitting': 'Sending...',
+  'contact.form.submit': 'Send via WhatsApp',
   'contact.success.title': 'Message Sent!',
   'contact.success.description': 'Thank you for contacting us! We will respond as soon as possible.',
 
