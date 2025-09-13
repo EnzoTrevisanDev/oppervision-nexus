@@ -18,7 +18,7 @@ const BlogPost = () => {
     title: "Monitoring Automation Best Practices",
     description: "Learn how to implement effective monitoring automation for your infrastructure",
     content: `
-      <h2>Introduction</h2>
+      <h2>Intro</h2>
       <p>Monitoring automation is crucial for maintaining reliable IT infrastructure. In this comprehensive guide, we'll explore the best practices for implementing automated monitoring solutions.</p>
       
       <h2>Key Benefits</h2>
